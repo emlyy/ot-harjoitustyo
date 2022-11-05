@@ -5,4 +5,4 @@
 
 [komentorivi.txt](https://github.com/emlyy/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
-:)
+:)))
