@@ -112,4 +112,3 @@ Date:   Sat Nov 5 13:45:02 2022 +0200
 
  tiedosto.txt | 0
  1 file changed, 0 insertions(+), 0 deletions(-)
-:)
