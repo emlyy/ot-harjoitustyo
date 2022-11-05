@@ -1,0 +1,114 @@
+commit dff22a43a759e44c462db2a0fbfa7dcd28df5c7e
+Author: Emilia Kupsanen <92013457+emlyy@users.noreply.github.com>
+Date:   Sat Nov 5 14:56:51 2022 +0200
+
+    poisto ja uudelleennimeäminen
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit b1c52af6d07eafa89a35f69d588ca39a5fc37c86
+Author: Emilia Kupsanen <92013457+emlyy@users.noreply.github.com>
+Date:   Sat Nov 5 14:49:27 2022 +0200
+
+    yritetään uudestaan kun unohdin committaa aluksi. luodaan tiedostot
+
+ tiedostoja/{file22 => file1} | 0
+ tiedostoja/file2             | 0
+ tiedostoja/file3             | 1 -
+ 3 files changed, 1 deletion(-)
+
+commit 53fd830536d488dc3facfe3b1ca711b66be3fc2f
+Author: Emilia Kupsanen <92013457+emlyy@users.noreply.github.com>
+Date:   Sat Nov 5 14:38:14 2022 +0200
+
+    poistettu file1 ja uudelleennimetty file2
+
+ tiedostoja/file22 | 0
+ tiedostoja/file3  | 1 +
+ 2 files changed, 1 insertion(+)
+
+commit 3a506a0f927dfed8581880d1061e50f02b78852d
+Author: Emilia Kupsanen <92013457+emlyy@users.noreply.github.com>
+Date:   Sat Nov 5 14:16:59 2022 +0200
+
+    muutoksia
+
+ eka.txt      | 2 ++
+ kolmas.txt   | 1 +
+ tiedosto.txt | 8 --------
+ 3 files changed, 3 insertions(+), 8 deletions(-)
+
+commit c87fe3a1f6c90897cb5a659bf2948a59efdb68fa
+Author: Emilia Kupsanen <92013457+emlyy@users.noreply.github.com>
+Date:   Sat Nov 5 14:13:58 2022 +0200
+
+    uudelleen nimeäminen
+
+ eka.txt | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+commit 73f5bed6ad51224bd2b89604a389287d08e773c5
+Author: Emilia Kupsanen <92013457+emlyy@users.noreply.github.com>
+Date:   Sat Nov 5 14:09:30 2022 +0200
+
+    poistettin toinen.txt
+
+ toinen.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 62b1eef2d54ba008fe3c1d5d81b793d530c77e11
+Author: Emilia Kupsanen <92013457+emlyy@users.noreply.github.com>
+Date:   Sat Nov 5 14:05:39 2022 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+commit c4720b2993228bebcfad4596410efd2d1eddc983
+Author: Emilia Kupsanen <92013457+emlyy@users.noreply.github.com>
+Date:   Sat Nov 5 14:03:57 2022 +0200
+
+    tekstin lisäys
+
+ tiedosto.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit b3a18178082c3ebfe61c8b3b9cc4e39131698bcf
+Author: Emilia Kupsanen <92013457+emlyy@users.noreply.github.com>
+Date:   Sat Nov 5 13:55:43 2022 +0200
+
+    stuff lisätty
+
+ stuff/spooky.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 2265750467782b31978d87120b32eef5374c295c
+Author: Emilia Kupsanen <92013457+emlyy@users.noreply.github.com>
+Date:   Sat Nov 5 13:51:29 2022 +0200
+
+    kolmas.txt lisätty
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit ded3565ace2f47d07a80aa4a18af49cccc7feb0f
+Author: Emilia Kupsanen <92013457+emlyy@users.noreply.github.com>
+Date:   Sat Nov 5 13:47:56 2022 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 3 +++
+ toinen.txt   | 0
+ 2 files changed, 3 insertions(+)
+
+commit 2509d6818a2fe0e76061d9c2d3aa7465599783d2
+Author: Emilia Kupsanen <92013457+emlyy@users.noreply.github.com>
+Date:   Sat Nov 5 13:45:02 2022 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
