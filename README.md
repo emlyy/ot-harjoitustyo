@@ -2,6 +2,7 @@
 
 ## Dokumentaatio
 [vaatimusmäärittely](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+[työaikakirjanpito](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
 ## Tehtävät
 ### Viikko 1
