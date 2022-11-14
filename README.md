@@ -1,4 +1,7 @@
 # Ohjelmistotekniikka, harjoitustyö
+
+[vaatimusmäärittely](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+
 ## Tehtävät
 ### Viikko 1
 [gitlog.txt](https://github.com/emlyy/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
