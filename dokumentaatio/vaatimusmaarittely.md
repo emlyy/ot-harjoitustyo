@@ -7,10 +7,13 @@ Sovellus on yksinkertainen roolipeli. Käyttäjän ohjaama hahmo on jäänyt jum
 - Voi aloittaa pelin uudestaan milloin vaan
 - Käyttäjä voi liikuttaa hahmoa näppäimillä eri suuntiin
 - Valintoja tehdessä valita nuolinäppäimillä ja painamalla enter
-- Teksti näkyy ruudun alareunassa ja päällä on näkymä luolasta  
+- Teksti näkyy ruudun alareunassa ja päällä on näkymä luolasta
+- pelin suoriutumista mitataan ajalla ja pisteillä
 
-- Pick up item: jos törmää esineeseen teksti kertoo mikä se on ja kysyy haluaako ottaa sen mukaan
-- Combat: jos törmää viholliseen niin pitää valita vaihtoehdoista mitä tekee
+- Pick up item
+  - jos törmää esineeseen teksti kertoo mikä se on ja kysyy haluaako ottaa sen mukaan
+- Combat
+  - jos törmää viholliseen niin pitää valita vaihtoehdoista mitä tekee
   - jos on löytänyt esineen se voi näkyä vaihtoehdoissa
   - rng päättää mitä tapahtuu
 - Read sign/note
@@ -19,10 +22,11 @@ Sovellus on yksinkertainen roolipeli. Käyttäjän ohjaama hahmo on jäänyt jum
 - Boss fights
   - eri vaihtoehtoja valittavana kun tavallisia vihollisia vastaan
   - pakenemis vaihtoehto
-- Decide to go outside when raining
-  - ennen kuin menee ulos teksti kertoo sataako ja kysyy haluaako mennä ulos
 
 ## Jatkokehitysideat
 - näkee mitä esineitä on mukana
 - löytää ja syödä ruokaa mikä antaa healthpoints
 - taisteluun minipeli
+- bonus boss
+- hahmo kävelee lampun/soihdun kanssa eli näkee vain lähellä olevat asiat
+- pitää kirjaa parhaista suorituksista
