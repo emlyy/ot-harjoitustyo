@@ -1,5 +1,5 @@
-#Changelog
-##viikko 3
+# Changelog
+## viikko 3
 - käyttäjä näkee taustan ja pystyy liikuttamaan hahmoa
 - lisätty ran-sprite, asettaa koordinaatit, lataa kuvan, sisältää update metodin, joka päivittää koordinaatit
 - lisätty background-sprite, lataa kuvan, asettaa koordinaatit
