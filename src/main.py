@@ -10,6 +10,10 @@ class CaveGame:
         self.all_sprites = pygame.sprite.Group()
         
         self.background_color = (55,55,55)
+        self.spawn_x = 20
+        self.spawn_y = 290
+        self.ran_image = "src/images/ran1.png"
+        self.bg_image = "src/images/cave_tilesheet-1.png"
         
         # when starting the game or entering a new room
         self.start = True
@@ -22,8 +26,8 @@ class CaveGame:
 
     def sprites(self):
         # for making the sprites when game starts, first room
-        self.player = Ran(20,290)
-        self.bg = Background(0,0,"images/cave_tilesheet-1.png")
+        self.player = Ran(self.spawn_x,self.spawn_y, self.ran_image)
+        self.bg = Background(0,0,self.bg_image)
         self.all_sprites.add(self.bg)
         self.all_sprites.add(self.player)
         
