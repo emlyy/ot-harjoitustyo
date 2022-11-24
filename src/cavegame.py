@@ -24,7 +24,7 @@ class CaveGame:
 
     def sprites(self):
         # for making the sprites when game starts, first room
-        self.player = Ran(SPAWN_X,SPAWN_Y, RAN_IMAGE)
+        self.player = Ran(self, SPAWN_X,SPAWN_Y, RAN_IMAGE)
         self.bg = Background(0,0,BG_IMAGE)
         self.all_sprites.add(self.bg)
         self.all_sprites.add(self.player)
@@ -88,6 +88,6 @@ class CaveGame:
     def draw(self):
         self.screen.fill(BG_COLOR)
         self.all_sprites.draw(self.screen)
-        self.barriers.draw(self.screen)
+        # self.barriers.draw(self.screen) ## only to see the barriers
         pygame.display.update()
         self.clock.tick(60)
