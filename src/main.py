@@ -1,24 +1,16 @@
 import pygame
 from sprites.ran import Ran
 from sprites.background import Background
+from config import *
 
 
 class CaveGame:
     def __init__(self):
-        self.screen = pygame.display.set_mode((1184, 980))
+        self.screen = pygame.display.set_mode(SCREEN_SIZE)
         self.clock = pygame.time.Clock()
         self.all_sprites = pygame.sprite.Group()
         
-        self.background_color = (55,55,55)
-        self.spawn_x = 20
-        self.spawn_y = 290
-        self.ran_image = "src/images/ran1.png"
-        self.bg_image = "src/images/cave_tilesheet-1.png"
-        
-        # when starting the game or entering a new room
         self.start = True
-
-        # for the game loop
         self.running = True
         
         pygame.init()
@@ -26,8 +18,8 @@ class CaveGame:
 
     def sprites(self):
         # for making the sprites when game starts, first room
-        self.player = Ran(self.spawn_x,self.spawn_y, self.ran_image)
-        self.bg = Background(0,0,self.bg_image)
+        self.player = Ran(SPAWN_X,SPAWN_Y, RAN_IMAGE)
+        self.bg = Background(0,0,BG_IMAGE)
         self.all_sprites.add(self.bg)
         self.all_sprites.add(self.player)
         
@@ -64,7 +56,7 @@ class CaveGame:
 
     def draw(self):
         # draws everything on the screen
-        self.screen.fill(self.background_color)
+        self.screen.fill(BG_COLOR)
         self.all_sprites.draw(self.screen)
         pygame.display.update()
         self.clock.tick(60)
