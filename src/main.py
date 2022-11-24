@@ -2,7 +2,8 @@ from cavegame import CaveGame
 
 def main():
     game = CaveGame()
-    game.starting_screen()
+    while game.sc == True:
+        game.events()
     while game.running:
         if game.start == True:
             game.sprites()

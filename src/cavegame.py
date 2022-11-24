@@ -1,6 +1,7 @@
 import pygame
 from sprites.ran import Ran
 from sprites.background import Background
+from sprites.barrier import Barrier
 from config import *
 
 
@@ -10,9 +11,15 @@ class CaveGame:
         self.screen = pygame.display.set_mode(SCREEN_SIZE)
         self.clock = pygame.time.Clock()
         self.all_sprites = pygame.sprite.Group()
+        self.barriers = pygame.sprite.Group()
         
         self.start = True
-        self.running = True
+        self.running = False
+        self.sc = True
+        self.can_move = True
+
+        self.font = pygame.font.SysFont("cmr10", 50)
+        pygame.display.set_caption("Dungeon of Memories")
         
 
     def sprites(self):
@@ -22,27 +29,38 @@ class CaveGame:
         self.all_sprites.add(self.bg)
         self.all_sprites.add(self.player)
         
+        for i in barriers_list:
+            self.barriers.add(Barrier(i[0],i[1],i[2],i[3]))
+        
     def restart(self):
         pass
-
-    def starting_screen(self):
-        pass
-
+    
     def events(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 self.running = False
                 pygame.quit()
-            
+                
+            if self.sc == True:
+                self.starting_screen()
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_SPACE:
+                        self.sc = False
+                        self.running = True
+                        break
+                continue
+
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_a:
-                    self.player.c_x -= RAN_SPEED
-                if event.key == pygame.K_d:
-                    self.player.c_x += RAN_SPEED
-                if event.key == pygame.K_s:
-                    self.player.c_y += RAN_SPEED
-                if event.key == pygame.K_w:
-                    self.player.c_y -= RAN_SPEED
+                if self.can_move == True:
+                    if event.key == pygame.K_a:
+                        self.player.c_x -= RAN_SPEED
+                    if event.key == pygame.K_d:
+                        self.player.c_x += RAN_SPEED
+                    if event.key == pygame.K_s:
+                        self.player.c_y += RAN_SPEED
+                    if event.key == pygame.K_w:
+                        self.player.c_y -= RAN_SPEED
+                
                 if event.key == pygame.K_ESCAPE:
                     self.restart()
             
@@ -54,10 +72,22 @@ class CaveGame:
                 if event.key == pygame.K_s:
                     self.player.c_y = 0
                 if event.key == pygame.K_w:
-                    self.player.c_y = 0   
+                    self.player.c_y = 0  
+    
+    def text(self, text, x, y):
+        t = self.font.render(text, True, WHITE)
+        self.screen.blit(t, (x,y))
+
+    def starting_screen(self):
+        self.text("THIS IS THE STARTING SCREEN",30,30)
+        self.text("use wasd to move Ran", 200, 300)
+        self.text("press SPACE to start", 200, 400)
+        self.text("you can restart any time by pressing esc", 200, 500)
+        pygame.display.flip()
 
     def draw(self):
         self.screen.fill(BG_COLOR)
         self.all_sprites.draw(self.screen)
+        self.barriers.draw(self.screen)
         pygame.display.update()
         self.clock.tick(60)
