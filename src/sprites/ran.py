@@ -4,7 +4,6 @@ class Ran(pygame.sprite.Sprite):
     def __init__(self, pos_x, pos_y, image_path):
         super().__init__()
 
-        self.speed = 3
 
         self.image = pygame.image.load(image_path)
         
