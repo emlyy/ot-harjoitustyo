@@ -6,7 +6,6 @@ from sprites.texts import TextBox
 from sprites.note import Note
 from config import *
 from current_text import CurrentText
-from sprites.text_lines import *
 from actions import Actions
 from current_decision import CurrentDecision
 
@@ -19,15 +18,13 @@ class CaveGame:
         self.all_sprites = pygame.sprite.Group()
         self.barriers = pygame.sprite.Group()
         self.box = pygame.sprite.Group()
-        
         self.start = True
         self.running = False
-        self.sc = True
+        self.start_screen = True
         self.can_move = True
         self.decisions = False
         self.next = False
         self.actions = False
-
         self.water = False
         self.weapon = False
 
@@ -41,74 +38,71 @@ class CaveGame:
 
         self.text_actions = Actions()
         self.text_decisions = CurrentDecision()
-        
 
     def sprites(self):
         # for making the sprites when game starts, first room
         self.player = Ran(self, SPAWN_X,SPAWN_Y, RAN_IMAGE)
-        self.bg = Background(0,0,BG_IMAGE)
+        self.background = Background(0,0,BG_IMAGE)
         self.note = Note(self, NOTE_X, NOTE_Y, NOTE_IMAGE)
         self.d_box = TextBox(self, (255,0,0), D_BOX, D_BOX, D_BOX_X, Y2)
         self.box.add(self.d_box)
-        self.all_sprites.add(self.bg)
+        self.all_sprites.add(self.background)
         self.all_sprites.add(TextBox(self, (0,0,0), SCREEN_WIDTH, BOX_HEIGHT, 0, 636))
         self.all_sprites.add(TextBox(self, (0,0,0), SCREEN_WIDTH, BOX_HEIGHT, 0, 636))
         self.all_sprites.add(self.note)
         self.all_sprites.add(self.player)
-        
+
         for i in BARRIERS_LIST:
             self.barriers.add(Barrier(i[0],i[1],i[2],i[3]))
 
-        
-        
     def restart(self):
         pass
-    
+
     def events(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 self.running = False
                 pygame.quit()
-                
-            if self.sc == True:
+
+            if self.start_screen is True:
                 self.starting_screen()
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_SPACE:
-                        self.sc = False
+                        self.start_screen = False
                         self.running = True
                         break
                 continue
 
             if event.type == pygame.KEYDOWN:
-                if self.decisions == True:
+                if self.decisions is True:
                     if event.key == pygame.K_DOWN:
                         self.d_box.update_rect(Y3)
                     if event.key == pygame.K_UP:
                         self.d_box.update_rect(Y2)
-                
+
                 if event.key == pygame.K_SPACE:
-                    if self.decisions == True:
+                    if self.decisions is True:
                         if self.d_box.rect.y == Y2:
-                            self.text_decisions.update("y2")
+                            self.text_decisions.update("cord_y2")
                             action = str(self.text_decisions)
                             self.text_actions.update_current(action)
                             self.text_actions.act(self)
                             self.decisions = False
                             self.actions = True
                         if self.d_box.rect.y == Y3:
-                            self.text_decisions.update("y3")
+                            self.text_decisions.update("cord_y3")
                             action = str(self.text_decisions)
                             self.text_actions.update_current(action)
                             self.text_actions.act(self)
-                            self.decisions = False                      #decision stuff
+                            self.decisions = False
                             self.actions = True
                     else:
-                        if self.actions == True:
+                        if self.actions is True:
                             self.next = True
                             self.text_actions.act(self)
                             self.next = False
 
-                if self.can_move == True:
+                if self.can_move is True:
                     if event.key == pygame.K_a:
                         self.player.c_x -= RAN_SPEED
                     if event.key == pygame.K_d:
@@ -117,10 +111,10 @@ class CaveGame:
                         self.player.c_y += RAN_SPEED
                     if event.key == pygame.K_w:
                         self.player.c_y -= RAN_SPEED
-                
+
                 if event.key == pygame.K_ESCAPE:
                     self.restart()
-            
+
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_a:
                     self.player.c_x = 0
@@ -129,15 +123,15 @@ class CaveGame:
                 if event.key == pygame.K_s:
                     self.player.c_y = 0
                 if event.key == pygame.K_w:
-                    self.player.c_y = 0  
-    
-    def text(self, text, font, x, y):
-        t = font.render(text, True, WHITE)
-        self.screen.blit(t, (x,y))
+                    self.player.c_y = 0
 
-    def update_text(self, id, phrase):
-        id.update(phrase)
-    
+    def text(self, text, font, x_pos, y_pos):
+        the_text = font.render(text, True, WHITE)
+        self.screen.blit(the_text, (x_pos,y_pos))
+
+    def update_text(self, which_text, phrase):
+        which_text.update(phrase)
+
     def speaker(self):
         self.text(str(self.current_text1), self.font2, T_CORDS_X, T_CORDS_Y1)
         self.text(str(self.decision1), self.font2, T_CORDS_X, T_CORDS_Y2)
@@ -154,7 +148,7 @@ class CaveGame:
         self.screen.fill(BG_COLOR)
         self.all_sprites.draw(self.screen)
         self.speaker()
-        if self.decisions == True:
+        if self.decisions is True:
             self.box.draw(self.screen)
         #self.barriers.draw(self.screen) ## only to see the barriers
         pygame.display.update()

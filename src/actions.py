@@ -1,6 +1,4 @@
-import pygame
 from sprites.text_lines import *
-
 
 class Actions:
     def __init__(self):
@@ -9,7 +7,7 @@ class Actions:
 
     def update_current(self, action):
         self.current_action = action
-    
+
     def act(self, game):
         if self.current_action == "read_note":
             self.read_note(game)
@@ -25,7 +23,7 @@ class Actions:
         game.actions = False
 
     def read_note(self, game):
-        if game.next == True:
+        if game.next is True:
             self.counter += 1
         if self.counter == 0:
             game.update_text(game.current_text1, NOTE_1)

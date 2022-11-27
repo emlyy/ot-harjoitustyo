@@ -6,7 +6,7 @@ class Barrier(pygame.sprite.Sprite):
 
         self.image = pygame.Surface([width, height])
         self.image.fill((255,0,0))
-        
         self.rect = self.image.get_rect()
         self.rect.x = pos_x
         self.rect.y = pos_y
+        

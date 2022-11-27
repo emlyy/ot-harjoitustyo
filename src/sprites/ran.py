@@ -5,9 +5,7 @@ class Ran(pygame.sprite.Sprite):
         super().__init__()
 
         self.game = game
-
         self.image = pygame.image.load(image_path)
-        
         self.height = self.image.get_height()
         self.width = self.image.get_width()
         self.rect = self.image.get_rect()
