@@ -1,14 +1,16 @@
-from cavegame import CaveGame
+from ui.game import Game
+from ui.sprite_setter import sprites
+from ui.events import events
 
 def main():
-    game = CaveGame()
+    game = Game()
     while game.start_screen is True:
-        game.events()
+        events(game)
     while game.running:
         if game.start is True:
-            game.sprites()
+            sprites(game)
             game.start = False
-        game.events()
+        events(game)
         game.all_sprites.update()
         game.draw()
 

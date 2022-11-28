@@ -1,7 +1,5 @@
 import pygame
-from .text_lines import YES
-from .text_lines import NO
-from .text_lines import NOTE_FOUND
+from .text_lines import YES, NO, NOTE_FOUND
 
 class Note(pygame.sprite.Sprite):
     def __init__(self, game, pos_x, pos_y, image_path):
@@ -18,9 +16,6 @@ class Note(pygame.sprite.Sprite):
             self.found()
 
     def found(self):
-        # remove from all_sprites ##i really should make like a sprites
-        # manager create, add and remove to from group
-        # if next and x is True next += 1 x and false when inside
         self.game.can_move = False
         self.game.decisions = True
         self.game.text_decisions.update_actions("read_note", "back")
