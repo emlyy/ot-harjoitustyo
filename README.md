@@ -7,4 +7,6 @@
 
 [changelog](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 
+[arkkitehtuuri](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
 [käytetyistä kuvista](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/lainatut_kuvat.md)
