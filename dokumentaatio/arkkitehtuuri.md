@@ -9,6 +9,7 @@
       CurrentDecision --> CurrentText
       ui --> CurrentText
       sprites --> combat
+      sprites --> CurrentDecision
       CurrentDecision --> Actions
       Actions --> CurrentText
       combat --> CurrentDecision
