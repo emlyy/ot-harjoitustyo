@@ -8,9 +8,9 @@
       ui --> CurrentDecision
       CurrentDecision --> CurrentText
       ui --> CurrentText
-      Sprites --> combat
+      sprites --> combat
       CurrentDecision --> Actions
       Actions --> CurrentText
-      
+      combat --> CurrentDecision
 ```
 
