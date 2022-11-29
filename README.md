@@ -19,7 +19,7 @@ poetry run invoke start
 ```
 Testikattavuus raportti generoituu htmlcov-hakemistoon komennolla:
 ```
-poetry run invoke coverage_report
+poetry run invoke coverage-report
 ```
 Testit komennolla:
 ```
