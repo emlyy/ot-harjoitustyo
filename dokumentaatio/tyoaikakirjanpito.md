@@ -12,3 +12,4 @@
 |26.11 | 8 | toiminnallisuus |
 | 27.11 | 1 | pylint |
 | 28.11 | 3 | rakenteen refaktorointi ja testaus |
+| yht | 36 |
