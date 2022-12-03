@@ -4,7 +4,7 @@
 Sovellus on yksinkertainen roolipeli. Käyttäjän ohjaama hahmo on jäänyt jumiin luolaan ja hänen pitää selvitä ulos vihjeiden avulla. Matkalla voi löytyä erilaisia esineitä, jotka auttavat pelin läpäisemiseen. Luolassa on myös vihollisia, joita vastaan pitää taistella jos niihin törmää.
 
 ## Toiminnallisuudet
-- Voi aloittaa pelin uudestaan milloin vaan
+- (Tehty) Voi aloittaa pelin uudestaan milloin vaan
 - (Tehty) Käyttäjä voi liikuttaa hahmoa näppäimillä eri suuntiin
 - (Tehty) Valintoja tehdessä valita nuolinäppäimillä ja painamalla space
 - (Tehty) Teksti näkyy ruudun alareunassa ja päällä on näkymä luolasta
@@ -12,7 +12,7 @@ Sovellus on yksinkertainen roolipeli. Käyttäjän ohjaama hahmo on jäänyt jum
 
 - Pick up item
   - jos törmää esineeseen teksti kertoo mikä se on ja kysyy haluaako ottaa sen mukaan
-- Combat
+- (Tehty) Combat
   - jos törmää viholliseen niin pitää valita vaihtoehdoista mitä tekee
   - jos on löytänyt esineen se voi näkyä vaihtoehdoissa
   - rng päättää mitä tapahtuu
