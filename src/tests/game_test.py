@@ -1,6 +1,6 @@
 import unittest
 import pygame
-#from sprites.ran import Ran
+from sprites.ran import Ran
 from sprites.note import Note
 from current_decision import CurrentDecision
 from actions import Actions
@@ -35,10 +35,10 @@ class Game:
 class TestGame(unittest.TestCase):
     def setUp(self):
         self.game = Game()
-        #self.player = Ran(self.game, 300, 300, "src/images/ran-1.png")
+        self.game.player = Ran(self.game, 300, 300, "src/images/ran-1.png")
         self.game.note = Note(self.game, 500, 300, "src/images/star.png")
         self.game.text_decisions = CurrentDecision()
-        self.text_action = Actions()
+        self.game.text_actions = Actions()
         self.game.current_text1 = CurrentText()
         self.game.decision1 = CurrentText()
         self.game.decision2 = CurrentText()
@@ -60,7 +60,7 @@ class TestGame(unittest.TestCase):
         self.game.current_text1.update("text1")
         self.game.decision1.update("text2")
         self.game.decision2.update("text3")
-        self.text_action.back(self.game)
+        self.game.text_actions.back(self.game)
 
         self.assertEqual(str(self.game.current_text1) , "")
         self.assertEqual(str(self.game.decision1) , "")
@@ -70,7 +70,8 @@ class TestGame(unittest.TestCase):
         self.assertEqual(self.game.actions, False)
 
     def test_cannot_move_when_note_found(self):
-        self.game.note.found()
+        self.game.player.rect.x = 500
+        self.game.note.collision()
         self.assertEqual(self.game.can_move, False)
 
 

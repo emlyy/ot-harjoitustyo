@@ -1,7 +1,7 @@
 import pygame
-from .text_lines import YES, NO, NOTE_FOUND
+from .text_lines import ENEMY_NEAR, PUNCH, THROW_ROCK
 
-class Note(pygame.sprite.Sprite):
+class Enemy(pygame.sprite.Sprite):
     def __init__(self, game, pos_x, pos_y, image_path):
         super().__init__()
 
@@ -13,8 +13,11 @@ class Note(pygame.sprite.Sprite):
 
     def collision(self):
         if pygame.sprite.collide_rect(self, self.game.player):
-            self.game.text_actions.found(self.game, "read_note", "back", NOTE_FOUND, YES, NO)
-            self.game.all_sprites.remove(self.game.note)
+            self.game.combat = True
+            self.game.enemies.remove(self)
+            self.game.see_enemies.add(self)
+            self.game.text_actions.found(self.game, "punch", "throw_rock",
+            ENEMY_NEAR, PUNCH, THROW_ROCK)
 
     def update(self):
         self.collision()

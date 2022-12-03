@@ -1,6 +1,7 @@
 from ui.game import Game
-from ui.sprite_setter import sprites
+from ui.sprite_setter import sprites_setter
 from ui.events import events
+from ui.first_room import first_room
 
 def main():
     game = Game()
@@ -8,10 +9,12 @@ def main():
         events(game)
     while game.running:
         if game.start is True:
-            sprites(game)
+            sprites_setter(game)
+            first_room(game)
             game.start = False
         events(game)
         game.all_sprites.update()
+        game.enemies.update()
         game.draw()
 
 

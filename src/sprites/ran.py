@@ -1,4 +1,5 @@
 import pygame
+from config import RAN_SPEED
 
 class Ran(pygame.sprite.Sprite):
     def __init__(self, game, pos_x, pos_y, image_path):
@@ -31,8 +32,23 @@ class Ran(pygame.sprite.Sprite):
                     self.rect.y = collided_wall[0].rect.top - self.height
                 self.c_y = 0
 
+    def move(self):
+        pressed_keys = pygame.key.get_pressed()
+        if pressed_keys[pygame.K_a]:
+            self.c_x -= RAN_SPEED
+        if pressed_keys[pygame.K_d]:
+            self.c_x += RAN_SPEED
+        if pressed_keys[pygame.K_s]:
+            self.c_y += RAN_SPEED
+        if pressed_keys[pygame.K_w]:
+            self.c_y -= RAN_SPEED
+
     def update(self):
-        self.rect.x += self.c_x
-        self.collision("x")
-        self.rect.y += self.c_y
-        self.collision("y")
+        self.move()
+        if self.game.can_move is True:
+            self.rect.x += self.c_x
+            self.collision("x")
+            self.rect.y += self.c_y
+            self.collision("y")
+        self.c_x = 0
+        self.c_y = 0

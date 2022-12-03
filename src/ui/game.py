@@ -12,6 +12,8 @@ class Game:
         self.all_sprites = pygame.sprite.Group()
         self.barriers = pygame.sprite.Group()
         self.box = pygame.sprite.Group()
+        self.enemies = pygame.sprite.Group()
+        self.see_enemies = pygame.sprite.Group()
         self.start = True
         self.running = False
         self.start_screen = True
@@ -21,6 +23,7 @@ class Game:
         self.actions = False
         self.water = False
         self.weapon = False
+        self.combat = False
 
         self.font1 = pygame.font.SysFont("cmr10", 50)
         self.font2 = pygame.font.SysFont("cmr10", 28)
@@ -32,9 +35,6 @@ class Game:
 
         self.text_actions = Actions()
         self.text_decisions = CurrentDecision()
-
-    def restart(self):
-        pass
 
     def text(self, text, font, x_pos, y_pos):
         the_text = font.render(text, True, WHITE)
@@ -61,6 +61,8 @@ class Game:
         self.speaker()
         if self.decisions is True:
             self.box.draw(self.screen)
+        if self.combat is True:
+            self.see_enemies.draw(self.screen)
         #self.barriers.draw(self.screen) ## only to see the barriers
         pygame.display.update()
         self.clock.tick(60)

@@ -11,6 +11,7 @@ except FileNotFoundError:
 RAN_IMAGE = "src/images/ran-1.png"
 BG_IMAGE = "src/images/cave_tilesheet-1.png"
 NOTE_IMAGE = "src/images/star.png"
+ENEMY_IMAGE = "src/images/woodgrem-2.2.png"
 SPAWN_X = 20
 SPAWN_Y = 290
 BG_COLOR = (55,55,55)
@@ -36,4 +37,6 @@ D_BOX = 8
 D_BOX_X = 18
 NOTE_X = 235
 NOTE_Y = 295
+ENEMY_1_X = 780
+ENEMY_1_Y = 270
 #learn how to use os.getenv("") or
