@@ -2,6 +2,9 @@
 ## Dungeon of Memories
 Dungeon of Memories on yksinkertainen roolipeli. Käyttäjän ohjaama hahmo Ran on jumissa luolassa ja hänen pitää selvitä ulos. Matkalla voi löytää erilaisia vihjeitä ja esineitä, jotka voivat auttaa pelin läpäisemistä. Vihjeistä rakentuu myös hieman hahmon ja pelin tarinaa. Luolassa tulee vastaan woodgrem-hirviöitä. Jos törmää hirviöön, pitää taistella sitä vastaan. Käyttäjä pystyy valitsemaan eri teksti vaihtoehdoista, mitä haluaa hahmon tekevän taisteluissa.
 
+## Release
+[release 1](https://github.com/emlyy/ot-harjoitustyo/releases/tag/viikko5)
+
 ## Dokumentaatio
 [vaatimusmäärittely](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
