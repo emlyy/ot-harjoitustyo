@@ -20,6 +20,9 @@
       Sprites --> CurrentDecision
       CurrentDecision --> Actions
       Actions --> CurrentText
+      Restart --> Sprites
+      ui --> Restart
+      Restart --> ui
 ```
 ![game loop and movement](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/Game%20Loop%20and%20Movement.png)
 
