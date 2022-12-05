@@ -1,19 +1,25 @@
 ```mermaid
  classDiagram
-      ui --> sprites 
+      ui --> Sprites
+      class Sprites{
+          Ran
+          Note
+          Enemy
+          Barrier
+      }
       ui --> Actions
       class Actions{
           back
+          found
+          read_note
           combat
       }
       ui --> CurrentDecision
       CurrentDecision --> CurrentText
       ui --> CurrentText
-      sprites --> combat
       sprites --> CurrentDecision
       CurrentDecision --> Actions
       Actions --> CurrentText
-      combat --> CurrentDecision
 ```
 ![game loop and movement](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/Game%20Loop%20and%20Movement.png)
 
