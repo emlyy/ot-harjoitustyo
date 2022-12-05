@@ -1,6 +1,6 @@
 import pygame
 from config import Y2, Y3
-from .restart import restart
+from restart import restart
 
 def events(game):
     for event in pygame.event.get():

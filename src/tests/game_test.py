@@ -2,9 +2,12 @@ import unittest
 import pygame
 from sprites.ran import Ran
 from sprites.note import Note
+from sprites.barrier import Barrier
+from sprites.enemy import Enemy
 from current_decision import CurrentDecision
 from actions import Actions
 from current_text import CurrentText
+from config import BARRIERS_LIST
 
 class Game:
     def __init__(self):
@@ -13,6 +16,8 @@ class Game:
         self.all_sprites = pygame.sprite.Group()
         self.barriers = pygame.sprite.Group()
         self.box = pygame.sprite.Group()
+        self.enemies = pygame.sprite.Group()
+        self.see_enemies = pygame.sprite.Group()
         self.start = True
         self.running = False
         self.start_screen = True
@@ -22,9 +27,20 @@ class Game:
         self.actions = False
         self.water = False
         self.weapon = False
+        self.combat = False
 
         self.font1 = pygame.font.SysFont("cmr10", 50)
         self.font2 = pygame.font.SysFont("cmr10", 28)
+
+        self.text_decisions = CurrentDecision()
+        self.text_actions = Actions()
+        self.current_text1 = CurrentText()
+        self.decision1 = CurrentText()
+        self.decision2 = CurrentText()  
+
+    def sprites_setter(self):
+        for i in BARRIERS_LIST:
+            self.barriers.add(Barrier(i[0],i[1],i[2],i[3]))
 
     def restart(self):
         pass
@@ -32,16 +48,9 @@ class Game:
     def update_text(self, which_text, phrase):
         which_text.update(phrase)
 
-class TestGame(unittest.TestCase):
+class TestCurrents(unittest.TestCase):
     def setUp(self):
         self.game = Game()
-        self.game.player = Ran(self.game, 300, 300, "src/images/ran-1.png")
-        self.game.note = Note(self.game, 500, 300, "src/images/star.png")
-        self.game.text_decisions = CurrentDecision()
-        self.game.text_actions = Actions()
-        self.game.current_text1 = CurrentText()
-        self.game.decision1 = CurrentText()
-        self.game.decision2 = CurrentText()
 
     def test_text_decisions_works(self):
         action1 = "an action"
@@ -56,6 +65,10 @@ class TestGame(unittest.TestCase):
         self.game.current_text1.update("this is the text")
         self.assertEqual(str(self.game.current_text1) , "this is the text")
 
+class TestActions(unittest.TestCase):
+    def setUp(self):
+        self.game = Game() 
+
     def test_back_action_enables_movement_and_resets_texts(self):
         self.game.current_text1.update("text1")
         self.game.decision1.update("text2")
@@ -69,37 +82,43 @@ class TestGame(unittest.TestCase):
         self.assertEqual(self.game.can_move, True)
         self.assertEqual(self.game.actions, False)
 
+class TestSprites(unittest.TestCase):
+    def setUp(self):
+        self.game = Game()
+        self.game.player = Ran(self.game, 300, 300, "src/images/ran-1.png")
+        self.game.note = Note(self.game, 500, 300, "src/images/star.png")
+        self.game.enemy = Enemy(self.game, 780, 270, "src/images/woodgrem-2.2.png")
+        self.game.enemies.add(self.game.enemy)
+
     def test_cannot_move_when_note_found(self):
         self.game.player.rect.x = 500
-        self.game.note.collision()
+        self.game.note.update()
         self.assertEqual(self.game.can_move, False)
 
+    def test_cannot_move_through_barriers(self):
+        self.game.sprites_setter()
+        self.game.player.rect.x = 21
+        self.game.player.rect.y = 230
+        self.game.player.c_x -= 3
+        self.game.player.c_y += 3
+        if self.game.can_move is True:
+            self.game.player.rect.x += self.game.player.c_x
+            self.game.player.collision("x")
+            self.game.player.rect.y += self.game.player.c_y
+            self.game.player.collision("y")
+        self.assertEqual(self.game.player.rect.x, 20)
+        self.assertEqual(self.game.player.rect.y, 230+3)
 
-## figure a way to do this right when testing collision with walls
-    #def test_ran_spawns_correctly(self):
-        #self.assertEqual(self.game.player.rect.x , self.game.spawn_x)
-        #self.assertEqual(self.game.player.rect.y , self.game.spawn_y)
+    def test_enemy_collision(self):
+        self.assertEqual(self.game.combat, False)
+        self.assertEqual(self.game.can_move, True)
+        self.assertEqual(self.game.enemies.has(self.game.enemy), True)
 
-    #def test_ran_moves_left(self):
-        #self.player.c_x -= RAN_SPEED
-        #x = self.player.rect.x
-        #self.player.update()
-        #self.assertEqual(self.player.rect.x, x - RAN_SPEED)
-        
-    #def test_ran_moves_right(self):
-        #self.game.player.c_x += self.game.player.speed
-        #x = self.game.player.rect.x
-        #self.game.player.update()
-        #self.assertEqual(self.game.player.rect.x, x + self.game.player.speed)
+        self.game.player.rect.x = 780
+        self.game.player.rect.y = 275
+        self.game.enemy.update()
 
-    #def test_ran_moves_up(self):
-        #self.game.player.c_y -= self.game.player.speed
-        #x = self.game.player.rect.y
-        #self.game.player.update()
-        #self.assertEqual(self.game.player.rect.y, x - self.game.player.speed)
-
-    #def test_ran_moves_down(self):
-        #self.game.player.c_y += self.game.player.speed
-        #x = self.game.player.rect.y
-        #self.game.player.update()
-        #self.assertEqual(self.game.player.rect.y, x + self.game.player.speed)
+        self.assertEqual(self.game.combat, True)
+        self.assertEqual(self.game.can_move, False)
+        self.assertEqual(self.game.enemies.has(self.game.enemy), False)
+        self.assertEqual(self.game.see_enemies.has(self.game.enemy), True)

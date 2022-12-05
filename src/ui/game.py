@@ -66,4 +66,3 @@ class Game:
         #self.barriers.draw(self.screen) ## only to see the barriers
         pygame.display.update()
         self.clock.tick(60)
-
