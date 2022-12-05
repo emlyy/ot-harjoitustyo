@@ -17,7 +17,7 @@
       ui --> CurrentDecision
       CurrentDecision --> CurrentText
       ui --> CurrentText
-      sprites --> CurrentDecision
+      Sprites --> CurrentDecision
       CurrentDecision --> Actions
       Actions --> CurrentText
 ```
