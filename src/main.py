@@ -1,7 +1,7 @@
 from ui.game import Game
 from ui.sprite_setter import SpriteSet
 from ui.events import events
-from ui.first_room import first_room
+from ui.rooms import Rooms
 #from ui.ending_screen import EndingScreen
 
 def main():
@@ -14,7 +14,7 @@ def main():
         if game.start is True:
             setter.sprites_setter(game)
             setter.groups_setter(game)
-            first_room(game)
+            Rooms().first_room(game)
             game.start = False
         events(game)
         game.all_sprites.update()

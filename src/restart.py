@@ -1,6 +1,6 @@
 from config import SPAWN_X, SPAWN_Y
 from ui.sprite_setter import SpriteSet
-from ui.first_room import first_room
+from ui.rooms import Rooms
 
 def restart(game):
     SpriteSet().clear_all_groups(game)
@@ -22,4 +22,4 @@ def restart(game):
     game.player.rect.x = SPAWN_X
     game.player.rect.y = SPAWN_Y
 
-    first_room(game)
+    Rooms().first_room(game)
