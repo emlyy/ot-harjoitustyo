@@ -4,6 +4,7 @@
       ui --> Actions
       class Actions{
           back
+          combat
       }
       ui --> CurrentDecision
       CurrentDecision --> CurrentText
