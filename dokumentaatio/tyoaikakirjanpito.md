@@ -14,4 +14,5 @@
 | 28.11 | 3 | rakenteen refaktorointi ja testaus |
 | 1.12 | 5 | toiminnallisuus |
 | 3.12 | 5 | toiminnallisuus, koodin refaktorointi |
-| yht | 46 |
+| 5.12 | 4 | testaaminen, refaktorointi ja arkkitehtuuri |
+| yht | 50 |

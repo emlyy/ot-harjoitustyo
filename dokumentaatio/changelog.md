@@ -18,6 +18,8 @@
 - testattu tekstivallinnan vaihtaminen toimii oikein (CurrentDecision), tämän hetkinen teksti päivittyy oikein (CurrentText), Back-Action palauttaa tämän hetkiset tekstit tyhjiksi, hahmoa voi taas liikuttaa, kun löytää kirjeen hahmoa ei voi liikuttaa 
 
 ## viikko 5
-- enemy-sprite lisätty
+- enemy-sprite lisätty, enemy.update vastaa törmäyksien pelaajaan kanssa tarkastamisesta
 - kun törmää viholliseen näkyy eri tekstivalintoja ja kun valitsee niin valintaa vastaava teksti ilmestyy
 - voi aloittaa pelin uudelleen painamalla esc
+- uudet luokat: Rooms (vastaa eri huoneista, firstroom pitää huolen että oikeat spritet on mukana), Restart (kutsuu tarvittavat metodit, jotta pelin voi aloittaa uudestaan, muuttaa tarvittavat muuttujat alku asentoon), SpriteSet
+- testattu: hahmoa ei voi liikuttaa rajojen ukopuolelle, hirviöön törmääminen
