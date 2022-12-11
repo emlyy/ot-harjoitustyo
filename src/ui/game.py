@@ -15,6 +15,7 @@ class Game:
         self.box = pygame.sprite.Group()
         self.enemies = pygame.sprite.Group()
         self.see_enemies = pygame.sprite.Group()
+        self.door = pygame.sprite.GroupSingle()
         self.start = True
         self.running = False
         self.start_screen = True

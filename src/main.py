@@ -22,6 +22,7 @@ def main():
         events(game)
         game.all_sprites.update()
         game.enemies.update()
+        game.door.update()
         game.draw()
     end.add_latest(game)
     end.get_scores()

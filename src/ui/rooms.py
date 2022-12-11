@@ -16,4 +16,4 @@ class Rooms:
 
         for i in BARRIERS_LIST:
             game.barriers.add(Barrier(i[0],i[1],i[2],i[3]))
-        game.all_sprites.add(Door(game,1048,256))
+        game.door.add(Door(game,1130,276))
