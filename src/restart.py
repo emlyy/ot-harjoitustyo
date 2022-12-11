@@ -1,6 +1,4 @@
-from config import SPAWN_X, SPAWN_Y
 from ui.sprite_setter import SpriteSet
-from ui.rooms import Rooms
 
 def restart(game):
     SpriteSet().clear_all_groups(game)
@@ -13,15 +11,15 @@ def restart(game):
     game.water = False
     game.weapon = False
     game.combat = False
+    game.second_room = False
+    game.third_room = False
 
     game.update_text(game.current_text1, "")
     game.update_text(game.decision1, "")
     game.update_text(game.decision2, "")
     game.text_actions.counter = 0
 
-    game.player.rect.x = SPAWN_X
-    game.player.rect.y = SPAWN_Y
-
     game.score.reset_scores()
+    game.door.update_where("second")
 
-    Rooms().first_room(game)
+    SpriteSet().first_room(game)

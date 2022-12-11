@@ -12,13 +12,15 @@ class Game:
         self.clock = pygame.time.Clock()
         self.all_sprites = pygame.sprite.Group()
         self.barriers = pygame.sprite.Group()
-        self.box = pygame.sprite.Group()
+        self.box = pygame.sprite.GroupSingle()
         self.enemies = pygame.sprite.Group()
         self.see_enemies = pygame.sprite.Group()
-        self.door = pygame.sprite.GroupSingle()
+        self.doors = pygame.sprite.GroupSingle()
         self.start = True
         self.running = False
         self.start_screen = True
+        self.second_room = False
+        self.third_room = False
         self.can_move = True
         self.decisions = False
         self.next = False

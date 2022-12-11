@@ -1,7 +1,6 @@
 from ui.game import Game
 from ui.sprite_setter import SpriteSet
 from ui.events import events
-from ui.rooms import Rooms
 from ui.starting_screen import StartingScreen
 from ui.ending_screen import EndingScreen
 
@@ -17,12 +16,16 @@ def main():
         if game.start is True:
             setter.sprites_setter(game)
             setter.groups_setter(game)
-            Rooms().first_room(game)
+            setter.first_room(game)
             game.start = False
+        if game.second_room is True:
+            setter.second_room(game)
+        if game.third_room is True:
+            setter.third_room(game)
         events(game)
         game.all_sprites.update()
         game.enemies.update()
-        game.door.update()
+        game.doors.update()
         game.draw()
     end.add_latest(game)
     end.get_scores()
