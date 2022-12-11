@@ -8,7 +8,7 @@ Sovellus on yksinkertainen roolipeli. Käyttäjän ohjaama hahmo on jäänyt jum
 - (Tehty) Käyttäjä voi liikuttaa hahmoa näppäimillä eri suuntiin
 - (Tehty) Valintoja tehdessä valita nuolinäppäimillä ja painamalla space
 - (Tehty) Teksti näkyy ruudun alareunassa ja päällä on näkymä luolasta
-- pelin suoriutumista mitataan ajalla ja pisteillä
+- (Tehty) pelin suoriutumista mitataan pisteillä
 
 - Pick up item
   - jos törmää esineeseen teksti kertoo mikä se on ja kysyy haluaako ottaa sen mukaan
