@@ -10,11 +10,11 @@ class SpriteSet:
     def sprites_setter(self, game):
         game.player = Ran(game, SPAWN_X,SPAWN_Y, RAN_IMAGE)
         game.background = Background(0,0,BG_IMAGE)
-        game.d_box = TextBox(game, (255,0,0), D_BOX, D_BOX, D_BOX_X, Y2)
+        game.d_box = TextBox((255,0,0), D_BOX, D_BOX, D_BOX_X, Y2)
 
     def groups_setter(self, game):
         game.all_sprites.add(game.background,
-        TextBox(game, (0,0,0), SCREEN_WIDTH, BOX_HEIGHT, 0, 636),
+        TextBox((0,0,0), SCREEN_WIDTH, BOX_HEIGHT, 0, 636),
         game.player)
         game.box.add(game.d_box)
 

@@ -49,8 +49,10 @@ class Actions:
     def rng_paths(self, game, text1, text2):
         if self.rng == 0:
             game.update_text(game.current_text1, text1)
+            game.score.add_to_score(50)
         else:
             game.update_text(game.current_text1, text2)
+            game.score.add_to_score(20)
 
     def combat(self, game, intro, one_a, one_b, two_a, two_b):
         if game.next is True:
@@ -65,6 +67,7 @@ class Actions:
             self.counter = 0
             game.combat = False
             game.see_enemies.empty()
+            game.score.add_to_score(100)
             self.back(game)
 
     def read_note(self, game, notes):
@@ -72,6 +75,8 @@ class Actions:
             self.counter += 1
         if self.counter == 6:
             self.counter = 0
+            game.score.add_knowledge_points(1)
+            game.score.add_to_score(50)
             self.back(game)
         else:
             if self.counter == 0:

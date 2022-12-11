@@ -22,4 +22,6 @@ def restart(game):
     game.player.rect.x = SPAWN_X
     game.player.rect.y = SPAWN_Y
 
+    game.score.reset_scores()
+
     Rooms().first_room(game)

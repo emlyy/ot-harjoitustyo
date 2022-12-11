@@ -1,10 +1,9 @@
 import pygame
 
 class TextBox(pygame.sprite.Sprite):
-    def __init__(self, game, color, width, height, pos_x, pos_y):
+    def __init__(self, color, width, height, pos_x, pos_y):
         super().__init__()
 
-        self.game = game
         self.image = pygame.Surface([width, height])
         self.image.fill(color)
         self.rect = self.image.get_rect()

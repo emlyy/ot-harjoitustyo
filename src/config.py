@@ -8,7 +8,7 @@ try:
 except FileNotFoundError:
     pass
 
-SCORE_FILE = "data/score_file.db"
+SCORE_FILE = "src/data/score_file.db"
 RAN_IMAGE = "src/images/ran-1.png"
 BG_IMAGE = "src/images/cave_tilesheet-1.png"
 NOTE_IMAGE = "src/images/star.png"

@@ -2,6 +2,7 @@ import pygame
 from current_text import CurrentText
 from actions import Actions
 from current_decision import CurrentDecision
+from score_counter import ScoreCounter
 from config import SCREEN_SIZE, WHITE, T_CORDS_X, T_CORDS_Y1, T_CORDS_Y2, T_CORDS_Y3, BG_COLOR
 
 class Game:
@@ -36,6 +37,8 @@ class Game:
         self.text_actions = Actions()
         self.text_decisions = CurrentDecision()
 
+        self.score = ScoreCounter()
+
     def text(self, text, font, x_pos, y_pos):
         the_text = font.render(text, True, WHITE)
         self.screen.blit(the_text, (x_pos,y_pos))
@@ -47,13 +50,6 @@ class Game:
         self.text(str(self.current_text1), self.font2, T_CORDS_X, T_CORDS_Y1)
         self.text(str(self.decision1), self.font2, T_CORDS_X, T_CORDS_Y2)
         self.text(str(self.decision2), self.font2, T_CORDS_X, T_CORDS_Y3)
-
-    def starting_screen(self):
-        self.text("THIS IS THE STARTING SCREEN",self.font1,30,30)
-        self.text("use wasd to move", self.font1, 200, 300)
-        self.text("press SPACE to start", self.font1, 200, 400)
-        self.text("you can restart any time by pressing esc", self.font1, 200, 500)
-        pygame.display.flip()
 
     def draw(self):
         self.screen.fill(BG_COLOR)
