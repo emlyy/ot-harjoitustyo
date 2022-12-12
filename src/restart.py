@@ -10,9 +10,7 @@ def restart(game):
     game.actions = False
     game.water = False
     game.weapon = False
-    game.combat = False
-    game.second_room = False
-    game.third_room = False
+    game.room = 1
 
     game.update_text(game.current_text1, "")
     game.update_text(game.decision1, "")

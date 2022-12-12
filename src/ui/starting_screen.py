@@ -23,7 +23,6 @@ class StartingScreen:
 
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RETURN:
-                    game.start_screen = False
                     game.running = True
                     game.score.set_name(self.input_text)
                     break

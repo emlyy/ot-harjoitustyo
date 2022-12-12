@@ -15,19 +15,18 @@ class Game:
         self.box = pygame.sprite.GroupSingle()
         self.enemies = pygame.sprite.Group()
         self.see_enemies = pygame.sprite.Group()
+        self.items = pygame.sprite.Group()
         self.doors = pygame.sprite.GroupSingle()
-        self.start = True
+
         self.running = False
-        self.start_screen = True
-        self.second_room = False
-        self.third_room = False
+        self.room = 1
         self.can_move = True
         self.decisions = False
-        self.next = False
         self.actions = False
+        self.next = False
+
         self.water = False
         self.weapon = False
-        self.combat = False
 
         self.font1 = pygame.font.SysFont("cmr10", 50)
         self.font2 = pygame.font.SysFont("cmr10", 28)
@@ -57,11 +56,11 @@ class Game:
     def draw(self):
         self.screen.fill(BG_COLOR)
         self.all_sprites.draw(self.screen)
+        self.items.draw(self.screen)
         self.speaker()
         if self.decisions is True:
             self.box.draw(self.screen)
-        if self.combat is True:
-            self.see_enemies.draw(self.screen)
+        self.see_enemies.draw(self.screen)
         #self.barriers.draw(self.screen) ## only to see the barriers
         pygame.display.update()
         self.clock.tick(60)

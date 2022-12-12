@@ -1,7 +1,7 @@
 import unittest
 import pygame
 from sprites.ran import Ran
-from sprites.note import Note
+from sprites.note import Item
 from sprites.barrier import Barrier
 from sprites.enemy import Enemy
 from current_decision import CurrentDecision
@@ -18,9 +18,15 @@ class Game:
         self.box = pygame.sprite.Group()
         self.enemies = pygame.sprite.Group()
         self.see_enemies = pygame.sprite.Group()
+        self.see_enemies = pygame.sprite.Group()
+        self.items = pygame.sprite.Group()
+        self.doors = pygame.sprite.GroupSingle()
         self.start = True
         self.running = False
         self.start_screen = True
+        self.second_room = False
+        self.third_room = False
+        self.room = 1
         self.can_move = True
         self.decisions = False
         self.next = False
@@ -86,8 +92,8 @@ class TestSprites(unittest.TestCase):
     def setUp(self):
         self.game = Game()
         self.game.player = Ran(self.game, 300, 300, "src/images/ran-1.png")
-        self.game.note = Note(self.game, 500, 300, "src/images/star.png")
-        self.game.enemy = Enemy(self.game, 780, 270, "src/images/woodgrem-2.2.png")
+        self.game.note = Item(self.game, 500, 300, "src/images/star.png", "read_note", "back", "NOTE_FOUND", "YES", "NO")
+        self.game.enemy = Enemy(self.game, 780, 270, "src/images/woodgrem-2.2.png", "normal")
         self.game.enemies.add(self.game.enemy)
 
     def test_cannot_move_when_note_found(self):

@@ -1,7 +1,7 @@
 import pygame
 
 class Door(pygame.sprite.Sprite):
-    def __init__(self, game, pos_x, pos_y):
+    def __init__(self, setter, game, pos_x, pos_y):
         super().__init__()
 
         self.image = pygame.Surface([50, 90])
@@ -11,6 +11,7 @@ class Door(pygame.sprite.Sprite):
         self.rect.x = pos_x
         self.rect.y = pos_y
         self.where = "second"
+        self.setter = setter
 
     def update_where(self, where):
         self.where = where
@@ -21,10 +22,10 @@ class Door(pygame.sprite.Sprite):
                 self.game.running = False
             if self.where == "third":
                 self.update_where("end")
-                self.game.third_room = True
+                self.setter.third_room(self.game)
             if self.where == "second":
                 self.update_where("third")
-                self.game.second_room = True
+                self.setter.second_room(self.game)
 
     def update(self):
         self.collision()
