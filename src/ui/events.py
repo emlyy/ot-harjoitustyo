@@ -3,6 +3,16 @@ from config import Y2, Y3
 from restart import restart
 
 def events(game):
+    """Checks user input events.
+
+    Always checks if user presses quit. While running checks always
+    if esc key is pressed to see if user wants to restart the game.
+    When decisions is True checks if user moves the red box (d_box)
+    that indicates which decision is chosen. Also checks if space
+    is pressed which selects the current decision.
+    When actions is True checks if space is pressed which indicates
+    that the next text should be displayed.
+    """    
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             game.running = False

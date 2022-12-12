@@ -3,6 +3,15 @@ from scores import Data
 from sprites.texts import TextBox
 
 class EndingScreen:
+    """Draws the ending screen.
+
+    Attributes:
+        scores: a list of all the names and their scores, as tuples.
+        name: name of the user.
+        score: score the user got.
+        end_sprites: a sprite group for all the sprites to be drawn on
+            the ending screen.
+    """    
     def __init__(self):
         self.scores = []
         self.data = Data()
@@ -12,11 +21,16 @@ class EndingScreen:
         self.end_sprites.add(TextBox((128,0,128), 400, 500, 280, 40))
 
     def add_latest(self, game):
+        """Adds the user's score into the database.
+        """        
         self.name = game.score.name
         self.score = game.score.count_total_score()
         self.data.add_scores(self.name, self.score)
 
     def get_scores(self):
+        """Makes a list of the scores.
+        Fills the list so that there are atleast four tuples.
+        """        
         self.scores = []
         list = self.data.read_top_scores()
         for score in list:
@@ -26,6 +40,8 @@ class EndingScreen:
                 self.scores.append(("empty",0000))
 
     def print_screen(self, game):
+        """Draws everything.
+        """        
         game.screen.fill((0,0,0))
         self.end_sprites.draw(game.screen)
         game.text("Scoreboard:",game.font1,300,250)

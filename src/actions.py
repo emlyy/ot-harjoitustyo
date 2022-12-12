@@ -5,7 +5,7 @@ EAT_LIST, LEAVE_IT, NOTE_LIST, WHICH_ITEM, NO_WEAPON, WEAPON_1,
 WEAPON_2, TALK_L, SWORD, WATER, NO_ITEM)
 
 class Actions:
-    """Class that takes care of the current action that's taking place.
+    """Current action that's taking place.
 
     Updates the three texts that can be seen during different actions
     such as during combat, reading a sign etc.

@@ -1,6 +1,8 @@
 from ui.sprite_setter import SpriteSet
 
 def restart(game):
+    """Resets the game.
+    """    
     SpriteSet().clear_all_groups(game)
     SpriteSet().groups_setter(game)
 
