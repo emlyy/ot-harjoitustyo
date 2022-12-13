@@ -24,26 +24,36 @@ Pelin näkymä näyttää seruaavalta:
 
 ![move](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls.png) Hahmoa liikutetaan wasd-näppäimillä.
 
-![restart](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-3.png) Pelin voi aloittaa uusiksi painamalla esc-näppäimtä.
+![toggle](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-2.png) Tekstivaihtoehtoa vaihdetaan nuolinäppäimillä.
+
+![select](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-5.png) Valitaan vaihtoehto space-näppäimellä.
+
+![restart](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-3.png) Peli aloitetaan uusiksi painamalla esc-näppäimtä.
 
 ![quit](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/quit.png) Peli suljetaan painamalla raksia.
 
 
 ## Tapahtumat
 
-Jos törmää esineeseen tai viholliseen hahmoa ei voi enään liikuttaa.
+Jos törmää esineeseen tai viholliseen hahmoa ei voi liikuttaa.
 
 ![itemeihin törmäys](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/collision_item.png)![viholliseen törmäys](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/combat.png)
 
 # Tekstitaphtuman valinta
 
-Alhaalla näkyvistä teksteistä valitaan nuolinäppäimiä käyttäen toinen vaihtoehdoista. Lopullinen valinta tehdään painamalla space-näppäintä.
-
-![teksti valinta](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/toggle_text1.png)![tekstivalinta 2](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/toggle_text2.png)
+Tekstitaphtumissa on aina kaksi valintaa, joista valitaan toinen.
 
 
-![toggle](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-2.png)![select](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-5.png)
-Kun on lukenut tekstin, seuraava teksti ilmestyy aina, kun painaa space-näppäintä.
+![teksti valinta](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/toggle_text1.png)
+
+
+Valintaa vaihdetaan nuolinäppäimillä.
+
+
+![tekstivalinta 2](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/toggle_text2.png)
+
+
+Lopullinen valinta tehdään painamalla space-näppäintä. Kun näytöllä on tekstiä, seuraava teksti ilmestyy aina, kun painaa space-näppäintä.
 
 
 # Pelin läpäisy
