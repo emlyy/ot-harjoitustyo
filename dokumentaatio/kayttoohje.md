@@ -25,6 +25,9 @@ Pelin näkymä näyttää seruaavalta:
 
 Hahmoa liikutetaan wasd-näppäimillä.
 
+<img align="left" src="https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls.png"> Hahmoa liikutetaan näppäimillä.
+
+Hahmoa liikutetaan wasd-näppäimillä.
 
 ![move](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls.png)
 
@@ -51,7 +54,9 @@ Peli suljetaan painamalla raksia.
 
 
 
-![move](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls.png) Hahmoa liikutetaan wasd-näppäimillä.
+![move](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls.png)
+
+Hahmoa liikutetaan wasd-näppäimillä.
 
 ![toggle](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-2.png) Tekstivaihtoehtoa vaihdetaan nuolinäppäimillä.
 
