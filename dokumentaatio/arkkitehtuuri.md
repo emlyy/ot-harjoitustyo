@@ -9,6 +9,7 @@ Pakkaus ui sisältää käyttölittymän koodin. Pakkaukset services ja sprites 
       ui --> sprites
       services --> repository
       sprites --> images
+      sprites --> services
 ```
 
 ## Käyttöliittymä
