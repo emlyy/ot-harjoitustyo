@@ -75,8 +75,7 @@ class SpriteSet:
     def second_room(self, game):
         """Sprites needed specifically in room 2.
 
-        """        
-        game.second_room = False
+        """
         game.room = 2
         self.clear_all_groups(game)
         game.cheese = Item(game, CHEESE_X, CHEESE_Y, CHEESE_IMAGE,
@@ -90,8 +89,7 @@ class SpriteSet:
     def third_room(self, game):
         """Sprites needed specifically in room 3.
 
-        """        
-        game.third_room = False
+        """
         game.room = 3
         self.clear_all_groups(game)
         game.all_sprites.add(Background(0,0,BG_IMAGE_3),
