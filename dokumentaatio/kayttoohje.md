@@ -27,12 +27,9 @@ Hahmoa liikutetaan wasd-näppäimillä.
 
 <img align="left" src="https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls.png"> Hahmoa liikutetaan näppäimillä.
 
-Hahmoa liikutetaan wasd-näppäimillä.
 
-![move](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls.png)
 
 Tekstivaihtoehtoa vaihdetaan nuolinäppäimillä.
-
 
 ![toggle](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-2.png)
 
