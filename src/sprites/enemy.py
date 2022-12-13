@@ -1,5 +1,5 @@
 import pygame
-from .text_lines import ENEMY_NEAR, PUNCH, THROW_ROCK, BOSS, TALK, USE_ITEM
+from text_lines import ENEMY_NEAR, PUNCH, THROW_ROCK, BOSS, TALK, USE_ITEM
 
 class Enemy(pygame.sprite.Sprite):
     """Enemy entity.

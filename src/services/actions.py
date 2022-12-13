@@ -1,5 +1,5 @@
 from random import randint
-from sprites.text_lines import (PUNCH_1, PUNCH_1A, PUNCH_1B,
+from text_lines import (PUNCH_1, PUNCH_1A, PUNCH_1B,
 PUNCH_2A, PUNCH_2B, ROCK_1, ROCK_1A, ROCK_1B, ROCK_2A, ROCK_2B,
 EAT_LIST, LEAVE_IT, NOTE_LIST, WHICH_ITEM, NO_WEAPON, WEAPON_1,
 WEAPON_2, TALK_L, SWORD, WATER, NO_ITEM)

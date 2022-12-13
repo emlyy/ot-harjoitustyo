@@ -5,7 +5,7 @@ from sprites.door import Door
 from sprites.item import Item
 from sprites.enemy import Enemy
 from sprites.barrier import Barrier
-from sprites.text_lines import YES, NO, NOTE_FOUND, CHEESE, EAT, DONT_EAT
+from text_lines import YES, NO, NOTE_FOUND, CHEESE, EAT, DONT_EAT
 from config import SPAWN_X, SPAWN_Y, NOTE_X, NOTE_Y, NOTE_IMAGE,RAN_IMAGE, BG_IMAGE, D_BOX, D_BOX_X, Y2, BARRIERS_LIST, BARRIERS_LIST_2, BARRIERS_LIST_3, ENEMY_1_X, ENEMY_1_Y,ENEMY_2_X,ENEMY_2_Y,ENEMY_3_X,ENEMY_3_Y,ENEMY_4_X,ENEMY_4_Y, ENEMY_IMAGE, BG_IMAGE_2, BG_IMAGE_3, SCREEN_WIDTH, BOX_HEIGHT, CHEESE_X, CHEESE_Y, CHEESE_IMAGE, KING_IMAGE
 
 class SpriteSet:
