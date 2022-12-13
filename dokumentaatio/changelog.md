@@ -23,3 +23,12 @@
 - voi aloittaa pelin uudelleen painamalla esc
 - uudet luokat: Rooms (vastaa eri huoneista, firstroom pitää huolen että oikeat spritet on mukana), Restart (kutsuu tarvittavat metodit, jotta pelin voi aloittaa uudestaan, muuttaa tarvittavat muuttujat alku asentoon), SpriteSet
 - testattu: hahmoa ei voi liikuttaa rajojen ukopuolelle, hirviöön törmääminen
+
+## viikko 6
+- aloitus sivulla voi kirjoittaa nimen
+- pelin päätyttyä tallennetaan nimi ja tulos tietokantaan, ja käyttäjä voi nähdä oman tuloksen ja tulostaulun lopetus sivulla
+- boss fight lisätty, tämä toteutetaan Actions luokan avulla
+- uudet luokat: ending_screen (vastaa lopetusnäytöstä)
+- uudet spritet: Door (kun törmää taso on läpäisty ja siirrytään seuraavalle tasolle), Note sprite uudelleen nimetty; nyt Item
+- Actions luokassa uusia metodeja boss_fight, first_room_actions, second_room_actions ja third_room_actions. Lisäksi metodi read_note uudelleen nimetty lines-metodiksi
+- testattu kun törmää boss tyyppiseen viholliseen, door spriten toimintaa, Data ja ScoreCounter luokkia, Action luokasta testattu metodeja lines ja intro
