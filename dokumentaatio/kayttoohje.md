@@ -22,43 +22,39 @@ Pelin näkymä näyttää seruaavalta:
 
 # Basic controls
 
-Hahmoa liikutetaan näppäimillä.
 
 <img align="right" src="https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls.png"> 
 Hahmoa liikutetaan näppäimillä.
 <br clear="right"/>
 
 
-
+<img align="right" src="https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-2.png">
 Tekstivaihtoehtoa vaihdetaan nuolinäppäimillä.
 
-<img align="center" src="https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-2.png">
-Tekstivaihtoehtoa vaihdetaan nuolinäppäimillä.
+<br clear="right"/>
 
-<br clear="center"/>
 
+<img align="right" src="https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-5.png">
 Valitaan vaihtoehto space-näppäimellä. / Seuraava teksti.
 
-<img align="left" src="https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-5.png">
-Valitaan vaihtoehto space-näppäimellä. / Seuraava teksti.
+<br clear="right"/>
 
-<br clear="left"/>
 
+
+<img align="right" src="https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-3.png">
 
 Peli aloitetaan uusiksi painamalla esc-näppäimtä.
 
-<img align="center" src="https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-3.png">
+<br clear="right"/>
 
 
-<br clear="center"/>
 
+
+<img align="right" src="https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/quit.png">
 
 Peli suljetaan painamalla raksia.
 
-<img align="center" src="https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/quit.png">
-
-
-<br clear="center"/>
+<br clear="right"/>
 
 
 
