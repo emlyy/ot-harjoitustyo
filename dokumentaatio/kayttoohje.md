@@ -22,6 +22,25 @@ Pelin näkymä näyttää seruaavalta:
 
 # Basic controls
 
+
+Hahmoa liikutetaan wasd-näppäimillä.
+![move](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls.png)
+
+Tekstivaihtoehtoa vaihdetaan nuolinäppäimillä.
+![toggle](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-2.png)
+
+Valitaan vaihtoehto space-näppäimellä. / Seuraava teksti.
+![select](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-5.png)
+
+Peli aloitetaan uusiksi painamalla esc-näppäimtä.
+![restart](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-3.png)
+
+Peli suljetaan painamalla raksia.
+![quit](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/quit.png)
+
+
+
+
 ![move](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls.png) Hahmoa liikutetaan wasd-näppäimillä.
 
 ![toggle](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-2.png) Tekstivaihtoehtoa vaihdetaan nuolinäppäimillä.
@@ -67,7 +86,7 @@ Kun peli on läpäisty voit nähdä oman tuloksen ja tulostaulun loppunäkymäss
 
 ![scoreboard](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/scoreboard.png)
 
-## Controls
+## Controls summary
 
 
 ![controls](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/all_controls.png)
