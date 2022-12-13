@@ -1,6 +1,6 @@
 import pygame
 from config import Y2, Y3
-from restart import restart
+from services.restart import restart
 
 def events(game):
     """Checks user input events.

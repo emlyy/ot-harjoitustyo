@@ -4,9 +4,9 @@ from sprites.ran import Ran
 from sprites.note import Item
 from sprites.barrier import Barrier
 from sprites.enemy import Enemy
-from current_decision import CurrentDecision
-from actions import Actions
-from current_text import CurrentText
+from services.current_decision import CurrentDecision
+from services.actions import Actions
+from services.current_text import CurrentText
 from config import BARRIERS_LIST
 
 class Game:

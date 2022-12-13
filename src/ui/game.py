@@ -1,8 +1,8 @@
 import pygame
-from current_text import CurrentText
-from actions import Actions
-from current_decision import CurrentDecision
-from score_counter import ScoreCounter
+from services.current_text import CurrentText
+from services.actions import Actions
+from services.current_decision import CurrentDecision
+from services.score_counter import ScoreCounter
 from config import SCREEN_SIZE, WHITE, T_CORDS_X, T_CORDS_Y1, T_CORDS_Y2, T_CORDS_Y3, BG_COLOR
 
 class Game:
