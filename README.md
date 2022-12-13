@@ -14,6 +14,8 @@ Dungeon of Memories on yksinkertainen roolipeli. Käyttäjän ohjaama hahmo Ran 
 
 [arkkitehtuuri](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
+[käyttöohje](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+
 [käytetyistä kuvista](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/lainatut_kuvat.md)
 
 
