@@ -26,16 +26,28 @@ Pelin näkymä näyttää seruaavalta:
 <img align="left" src="https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls.png"> Hahmoa liikutetaan näppäimillä.
 
 
+
+
 <img align="left" src="https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-2.png">
 Tekstivaihtoehtoa vaihdetaan nuolinäppäimillä.
+
+
+
 
 <img align="left" src="https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-5.png">
 
 Valitaan vaihtoehto space-näppäimellä. / Seuraava teksti.
 
+
+
+
 <img align="left" src="https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-3.png">
 
 Peli aloitetaan uusiksi painamalla esc-näppäimtä.
+
+
+
+
 
 <img align="left" src="https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/quit.png">
 
