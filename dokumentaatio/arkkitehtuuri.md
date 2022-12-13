@@ -3,6 +3,14 @@
 ## Rakenne
 Pakkaus ui sisältää käyttölittymän koodin. Pakkaukset services ja sprites sisältävät sovelluslogiikasta vastaavan koodin. Pakkaus repository sisältää koodin, joka vastaa pysyväistallennuksesta tietokantaan.
 
+```mermaid
+ classDiagram
+      ui --> services
+      ui --> sprites
+      services --> repository
+      sprites --> images
+```
+
 ## Käyttöliittymä
 Käyttöliittymä sisältää:
  -aloitusnäyttö
@@ -40,7 +48,6 @@ Sprite oliot vastaavat eri esineisiin ja pelihahmoon liittyvistä toiminnallisuu
       Sprites --> CurrentDecision
       Actions --> CurrentDecision
       Actions --> CurrentText
-      Restart --> Sprites
       ui --> ScoreCounter
       ScoreCounter --> repository
 ```
