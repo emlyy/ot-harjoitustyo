@@ -1,5 +1,5 @@
 import pygame
-from scores import Data
+from repository.scores import Data
 from sprites.texts import TextBox
 
 class EndingScreen:
