@@ -18,7 +18,7 @@ Sovellus on yksinkertainen roolipeli. Käyttäjän ohjaama hahmo on jäänyt jum
 - (Tehty) Read sign/note
   - luolassa on kylttejä ja kirjeitä, jotka antavat vihjeitä
   - jos niihin törmää, näytöllä näkyy tekstiä
-- (Tehty)Boss fights
+- (Tehty !!huom kun on voittanut niin enemies näkyy vielä)Boss fights
   - eri vaihtoehtoja valittavana kun tavallisia vihollisia vastaan
   - jos on löytänyt esineen se voi näkyä vaihtoehdoissa
 
