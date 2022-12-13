@@ -22,8 +22,7 @@ class TestScoreCounter(unittest.TestCase):
 class TestScores(unittest.TestCase):
     def setUp(self):
         self.scores = Data()
-        self.scores.add_scores("emly", 1400)
-        
+        self.scores.add_scores("emly", 1400) 
 
     def test_reading_scores(self):
         self.assertEqual(self.scores.read_top_scores()[0],("emly",1400))
