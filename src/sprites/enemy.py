@@ -2,6 +2,11 @@ import pygame
 from .text_lines import ENEMY_NEAR, PUNCH, THROW_ROCK, BOSS, TALK, USE_ITEM
 
 class Enemy(pygame.sprite.Sprite):
+    """Enemy entity.
+
+    Attributes:
+        combat_type: A string indicating whether it's a normal or boss enemy.
+    """
     def __init__(self, game, pos_x, pos_y, image_path, combat_type):
         super().__init__()
 
@@ -13,6 +18,8 @@ class Enemy(pygame.sprite.Sprite):
         self.combat_type = combat_type
 
     def collision(self):
+        """Checks for colllision with player.
+        """
         if pygame.sprite.collide_rect(self, self.game.player):
             if self.combat_type == "normal":
                 self.game.enemies.remove(self)
@@ -21,7 +28,8 @@ class Enemy(pygame.sprite.Sprite):
                 ENEMY_NEAR, PUNCH, THROW_ROCK)
             else:
                 self.game.enemies.empty()
-                self.game.text_actions.found(self.game,"talk", "item",BOSS,TALK,USE_ITEM)
+                self.game.text_actions.found(self.game,"talk", "item",
+                BOSS, TALK, USE_ITEM)
 
     def update(self):
         self.collision()

@@ -18,7 +18,7 @@ class Actions:
             as our deciding path.
         teleport: A boolean indicating if player should be moved
             after no item action
-    """    
+    """
     def __init__(self):
         self.counter = 0
         self.current_action = None
@@ -33,7 +33,7 @@ class Actions:
 
     def act(self, game):
         """Checks which room is running and divides action calls accordingly.
-        """        
+        """
         if self.current_action == "back" or self.current_action is None:
             self.back(game)
         elif game.room == 1:
@@ -63,7 +63,7 @@ class Actions:
 
         If the user has picked up an item it will change the options they
         see on screen.
-        """        
+        """
         if self.current_action == "item":
             if game.water is True:
                 if game.weapon is True:
@@ -90,7 +90,7 @@ class Actions:
         """Lets user continue playing.
 
         Transitions from current action to overworld play.
-        """        
+        """
         game.update_text(game.current_text1, "")
         game.update_text(game.decision1, "")
         game.update_text(game.decision2, "")
@@ -114,7 +114,7 @@ class Actions:
             question (str): Intro for what player has stumbled upon.
             decision_1 (str): Option one for user.
             decision_2 (str): Option two for user.
-        """        
+        """
         game.can_move = False
         game.decisions = True
         game.text_decisions.update_actions(action_1, action_2)
@@ -146,7 +146,7 @@ class Actions:
             two_a (str): Second text if rng has rolled 0.
             two_b (str): Second text if rng has rolled 1.
             Only one text at a time. Changes when space is pressed.
-        """        
+        """
         if game.next is True:
             self.counter += 1
         if self.counter == 0:
@@ -166,7 +166,7 @@ class Actions:
 
         Args:
             lines (list): A list of the texts in order to be shown on screen.
-        """        
+        """
         if game.next is True:
             self.counter += 1
         if self.counter == len(lines):
@@ -180,21 +180,21 @@ class Actions:
             else:
                 game.update_text(game.current_text1, lines[self.counter])
 
-    def boss_fight(self, game, list):
+    def boss_fight(self, game, lines):
         """Special combat in room 3.
 
         Args:
-            list (list): A list of the possible strings. 
-        """        
+            lines (list): A list of the possible strings.
+        """
         if game.next is True:
             self.counter += 1
         if self.counter == 0:
             self.intro(game,"")
-            self.rng_paths(game, list[0], list[2])
+            self.rng_paths(game, lines[0], lines[2])
         if self.counter == 1:
-            self.rng_paths(game, list[1], list[3])
+            self.rng_paths(game, lines[1], lines[3])
         if self.counter == 2:
-            game.update_text(game.current_text1, list[4])
+            game.update_text(game.current_text1, lines[4])
         if self.counter == 3:
             self.counter = 0
             game.see_enemies.empty()

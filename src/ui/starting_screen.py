@@ -3,6 +3,15 @@ from sprites.texts import TextBox
 from sprites.background import Background
 
 class StartingScreen:
+    """Performs the starting screen.
+
+    Attributes:
+        input: A string, the name that the user inputs.
+        max_ch: Integer representing the maximum characters the input name
+            is allowed to be.
+        start_sprites: The sprite group for the sprites needed during the
+            starting screen.
+    """    
     def __init__(self):
         self.input_text = ""
         self.max_ch = 10
@@ -17,6 +26,9 @@ class StartingScreen:
         self.start_sprites.add(Background(780, 620, "src/images/controls-5.png"))
 
     def events(self,game):
+        """Checks for user input events.
+
+        """        
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -34,6 +46,9 @@ class StartingScreen:
                         self.input_text += event.unicode
 
     def screen(self, game):
+        """Draws and updates the screen.
+
+        """        
         game.screen.fill((0,0,0))
         self.start_sprites.draw(game.screen)
         game.text("DUNGEON OF MEMORIES",game.font1,30,30)

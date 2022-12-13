@@ -5,7 +5,7 @@ class ScoreCounter:
         name: A string. The name that user inputs during starting screen.
         score: An integer counting the score.
         knowledge: An integer counting the collected knowledge points.
-    """    
+    """
     def __init__(self):
         self.name = ""
         self.score = 0

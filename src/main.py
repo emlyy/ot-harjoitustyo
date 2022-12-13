@@ -10,7 +10,7 @@ def main():
     While running is True checks for user events, updates all the sprites
     and draws the screen. First while loop is for starting screen and third
     while loop for ending screen.
-    """    
+    """
     game = Game()
     setter = SpriteSet()
     start = StartingScreen()

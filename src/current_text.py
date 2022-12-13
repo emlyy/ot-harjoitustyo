@@ -3,7 +3,7 @@ class CurrentText:
 
     Attributes:
         phrase: A string, the text.
-    """    
+    """
     def __init__(self):
         self.phrase = ""
 

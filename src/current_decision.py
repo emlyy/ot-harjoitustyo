@@ -9,7 +9,7 @@ class CurrentDecision:
             cordinate.
         action1: string. One of the actions that can be chosen.
         action2: string. The other action.
-    """    
+    """
     def __init__(self):
         self.cord_y2 = False
         self.cord_y3 = False
@@ -21,7 +21,7 @@ class CurrentDecision:
 
         Args:
             cord_y (str): Indicates which text option the red box is on.
-        """        
+        """
         if cord_y == "cord_y2":
             self.cord_y2 = True
         if cord_y == "cord_y3":
@@ -35,7 +35,7 @@ class CurrentDecision:
         """
         Returns:
             str: A string indicating which action is chosen to be executed next.
-        """        
+        """
         if self.cord_y2 is True:
             self.cord_y2 = False
             return self.action1

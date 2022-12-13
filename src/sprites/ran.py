@@ -2,6 +2,17 @@ import pygame
 from config import RAN_SPEED
 
 class Ran(pygame.sprite.Sprite):
+    """Player sprite.
+
+    Attributes:
+        game: Game Class
+        rect.x: The x cordinate
+        rect.y: The y cordinate
+        spawn_x: Player's spawn x cordinate.
+        spawn_y: Player's spawn y cordinate.
+        c_x: Change in x cordinate.
+        c_y: Change in y cordinate.
+    """
     def __init__(self, game, pos_x, pos_y, image_path):
         super().__init__()
 
@@ -16,10 +27,22 @@ class Ran(pygame.sprite.Sprite):
         self.c_y = 0
 
     def spawn(self):
+        """Sets the players cordinates to spawn.
+        """
         self.rect.x = self.spawn_x
         self.rect.y = self.spawn_y
 
     def collision(self,axis):
+        """Checks for any collisions with the barriers.
+
+        Prevents the player from walking through barriers.
+
+        Args:
+            axis (string): The direction which the player is currently moving.
+
+        Attributes:
+            collided_wall: A list of all the barriers that the player is colliding with.
+        """
         collided_wall = pygame.sprite.spritecollide(self,self.game.barriers, False)
         if axis == "x":
             if len(collided_wall) > 0:
@@ -37,6 +60,9 @@ class Ran(pygame.sprite.Sprite):
                 self.c_y = 0
 
     def move(self):
+        """Player movement.
+
+        """
         pressed_keys = pygame.key.get_pressed()
         if pressed_keys[pygame.K_a]:
             self.c_x -= RAN_SPEED
@@ -48,6 +74,8 @@ class Ran(pygame.sprite.Sprite):
             self.c_y -= RAN_SPEED
 
     def update(self):
+        """Updates player movement and checks for any collisions.
+        """
         self.move()
         if self.game.can_move is True:
             self.rect.x += self.c_x

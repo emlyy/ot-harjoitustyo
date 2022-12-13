@@ -1,6 +1,9 @@
 import pygame
 
 class Background(pygame.sprite.Sprite):
+    """Displays background images.
+
+    """
     def __init__(self, pos_x, pos_y, image_path):
         super().__init__()
 

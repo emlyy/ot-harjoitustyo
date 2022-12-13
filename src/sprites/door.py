@@ -1,7 +1,20 @@
 import pygame
 
 class Door(pygame.sprite.Sprite):
+    """Door to the next room.
+
+    """
     def __init__(self, setter, game, pos_x, pos_y):
+        """
+        Args:
+            setter (SpriteSet Class): Sets the sprites.
+            game (Game Class): Connection to the game.
+            pos_x (_type_): X cordinate for door.
+            pos_y (_type_): Y cordinate for door.
+
+        Attributes:
+            where: A string indicating where the door should lead.
+        """
         super().__init__()
 
         self.image = pygame.Surface([50, 90])
@@ -17,6 +30,8 @@ class Door(pygame.sprite.Sprite):
         self.where = where
 
     def collision(self):
+        """Checks for collisions with the player.
+        """
         if pygame.sprite.collide_rect(self, self.game.player):
             if self.where == "end":
                 self.game.running = False
