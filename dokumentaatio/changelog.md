@@ -25,7 +25,7 @@
 - testattu: hahmoa ei voi liikuttaa rajojen ukopuolelle, hirviöön törmääminen
 
 ## viikko 6
-- aloitus sivulla voi kirjoittaa nimen
+- aloitus sivulla voi kirjoittaa nimen ja peli käynnistyy enter näppäimellä
 - pelin päätyttyä tallennetaan nimi ja tulos tietokantaan, ja käyttäjä voi nähdä oman tuloksen ja tulostaulun lopetus sivulla
 - boss fight lisätty, tämä toteutetaan Actions luokan avulla
 - uudet luokat: ending_screen (vastaa lopetusnäytöstä)
