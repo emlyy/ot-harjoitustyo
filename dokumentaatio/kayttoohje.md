@@ -25,7 +25,7 @@ Pelin näkymä näyttää seruaavalta:
 Hahmoa liikutetaan näppäimillä.
 
 <img align="right" src="https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls.png"> 
-
+Hahmoa liikutetaan näppäimillä.
 <br clear="right"/>
 
 
@@ -33,14 +33,14 @@ Hahmoa liikutetaan näppäimillä.
 Tekstivaihtoehtoa vaihdetaan nuolinäppäimillä.
 
 <img align="center" src="https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-2.png">
-
+Tekstivaihtoehtoa vaihdetaan nuolinäppäimillä.
 
 <br clear="center"/>
 
 Valitaan vaihtoehto space-näppäimellä. / Seuraava teksti.
 
 <img align="left" src="https://github.com/emlyy/ot-harjoitustyo/blob/master/src/images/controls-5.png">
-
+Valitaan vaihtoehto space-näppäimellä. / Seuraava teksti.
 
 <br clear="left"/>
 
