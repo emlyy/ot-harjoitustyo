@@ -13,11 +13,15 @@ Pakkaus ui sisältää käyttölittymän koodin. Pakkaukset services ja sprites 
 
 ## Käyttöliittymä
 Käyttöliittymä sisältää:
- -aloitusnäyttö
- -pelinäkymä; kolme eri tasoa
-  -overworld näkymä ylhäällä
-  -teksti laatikko alhaalla
- -lopetusnäyttö
+ 
+* aloitusnäyttö
+ 
+* pelinäkymä
+  - kolme eri tasoa
+  - oveworld-näkymä ylhäällä
+  - tekstilaatikko alhaalla
+  
+* lopetusnäyttö
  
  ## Sovelluslogiikka
 Sovelluslogiikan suorittamisesta vastaa pakkauksessa services olevat luokat; spritet, Actions, CurrentDecision, CurrentText ja ScoreCounter.
