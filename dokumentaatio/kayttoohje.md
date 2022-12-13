@@ -63,7 +63,7 @@ Jos törmää esineeseen tai viholliseen hahmoa ei voi liikuttaa.
 
 ![itemeihin törmäys](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/collision_item.png)![viholliseen törmäys](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/combat.png)
 
-# Tekstitaphtuman valinta
+# Tekstitapahtuman valinta
 
 Tekstitaphtumissa on aina kaksi valintaa, joista valitaan toinen.
 
