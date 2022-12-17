@@ -58,3 +58,4 @@ Sprite oliot vastaavat eri esineisiin ja pelihahmoon liittyvistä toiminnallisuu
 
 ## Toiminnallisuus
 ![game loop and movement](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/Game%20Loop%20and%20Movement.png)
+![enemy collision](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/Enemy%20Collision.png)
