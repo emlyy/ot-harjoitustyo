@@ -37,9 +37,9 @@ def events(game):
                         if game.d_box.rect.y == Y3:
                             game.text_decisions.update("cord_y3")
                         action = str(game.text_decisions)
+                        game.decisions = False
                         game.text_actions.update_current(action)
                         game.text_actions.act(game)
-                        game.decisions = False
                         game.actions = True
                     else:
                         if game.actions is True:

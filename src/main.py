@@ -19,7 +19,6 @@ def main():
         start.events(game)
         start.screen(game)
     setter.sprites_setter(game)
-    setter.groups_setter(game)
     setter.first_room(game)
     while game.running:
         events(game)
