@@ -16,7 +16,7 @@
 | 3.12 | 5 | toiminnallisuus, koodin refaktorointi |
 | 5.12 | 4 | testaaminen, refaktorointi ja arkkitehtuuri |
 | 8.12 | 4 | toiminnallisuus ja tietokanta|
-| 11.12 | 4 | toiminnallisuus, |
+| 11.12 | 4 | toiminnallisuus |
 | 12.12 | 8 | toiminnallisuus, koodin refaktorointi, docstring |
-| 13.12 | 8 | testaus, arkkitehtuuri, rakenteen refaktorointi, docstring |
+| 13.12 | 8 | testaus, arkkitehtuuri, käyttöohje, rakenteen refaktorointi, docstring |
 | yht | 74 |
