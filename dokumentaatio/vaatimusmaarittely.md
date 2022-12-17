@@ -11,16 +11,16 @@ Sovellus on yksinkertainen roolipeli. Käyttäjän ohjaama hahmo on jäänyt jum
 - (Tehty) pelin suoriutumista mitataan pisteillä
 
 - Pick up item
-  - (Tehty osalle esineistä) jos törmää esineeseen teksti kertoo mikä se on ja kysyy haluaako ottaa sen mukaan
+  - (Tehty) jos törmää esineeseen teksti kertoo mikä se on ja kysyy haluaako ottaa sen mukaan
 - (Tehty) Combat
   - jos törmää viholliseen niin pitää valita vaihtoehdoista mitä tekee
   - rng päättää mitä tapahtuu
 - (Tehty) Read sign/note
-  - luolassa on kylttejä ja kirjeitä, jotka antavat vihjeitä
+  - luolassa on kylttejä/kirjeitä, jotka antavat vihjeitä
   - jos niihin törmää, näytöllä näkyy tekstiä
-- (Tehty !!huom kun on voittanut niin enemies näkyy vielä, myös ei voi käyttää water bucket tai sword, koska ne pitää lisätä)Boss fights
+- (Tehty)Boss fights
   - eri vaihtoehtoja valittavana kun tavallisia vihollisia vastaan
-  - jos on löytänyt esineen se voi näkyä vaihtoehdoissa
+  - jos on löytänyt esineen se näkyy vaihtoehdoissa
 
 ## Jatkokehitysideat
 - näkee mitä esineitä on mukana
