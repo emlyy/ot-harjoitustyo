@@ -2,7 +2,8 @@ from random import randint
 from text_lines import (PUNCH_1, PUNCH_1A, PUNCH_1B,
 PUNCH_2A, PUNCH_2B, ROCK_1, ROCK_1A, ROCK_1B, ROCK_2A, ROCK_2B,
 EAT_LIST, LEAVE_IT, NOTE_LIST, WHICH_ITEM, NO_WEAPON, WEAPON_1,
-WEAPON_2, TALK_L, SWORD, WATER, NO_ITEM)
+WEAPON_2, TALK_L, SWORD, WATER, NO_ITEM, WATER_LIST, WATER_NO,
+RANS_MEMORY_BOOK_2)
 
 class Actions:
     """Current action that's taking place.
@@ -44,19 +45,36 @@ class Actions:
             self.third_room_actions(game)
 
     def first_room_actions(self, game):
+        """first room actions
+
+        """
         if self.current_action == "read_note":
             self.lines(game, NOTE_LIST)
         if self.current_action == "throw_rock":
             self.combat(game, ROCK_1, ROCK_1A, ROCK_1B, ROCK_2A, ROCK_2B)
         if self.current_action == "punch":
             self.combat(game, PUNCH_1, PUNCH_1A, PUNCH_1B, PUNCH_2A, PUNCH_2B)
+        if self.current_action == "water":
+            game.water = True
+            self.lines(game, WATER_LIST)
+        if self.current_action == "no water":
+            self.lines(game, WATER_NO)
 
     def second_room_actions(self, game):
+        """second room actions for items
+
+        """
         if self.current_action == "eat":
             self.lines(game, EAT_LIST)
             game.items.remove(game.cheese)
         if self.current_action == "don't eat":
             self.lines(game, LEAVE_IT)
+        if self.current_action == "yes sword":
+            game.weapon = True
+            game.score.add_to_score(25)
+            self.back(game)
+        if self.current_action == "memory book":
+            self.lines(game, RANS_MEMORY_BOOK_2)
 
     def third_room_actions(self,game):
         """calls for actions when room 3 is running.
@@ -171,8 +189,10 @@ class Actions:
             self.counter += 1
         if self.counter == len(lines):
             self.counter = 0
-            game.score.add_knowledge_points(1)
-            game.score.add_to_score(50)
+            if self.current_action != "no water":
+                game.score.add_knowledge_points(1)
+                game.score.add_to_score(50)
+                game.see_enemies.empty()
             self.back(game)
         else:
             if self.counter == 0:
