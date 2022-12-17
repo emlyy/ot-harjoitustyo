@@ -93,7 +93,6 @@ class Actions:
                     self.found(game, "no item", "sword", WHICH_ITEM, NO_WEAPON, WEAPON_1)
                 else:
                     self.update_current("no item")
-                    self.lines(game, NO_ITEM)
         if self.current_action == "talk":
             self.lines(game, TALK_L)
         if self.current_action == "sword":

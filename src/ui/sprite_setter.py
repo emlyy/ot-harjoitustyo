@@ -18,7 +18,8 @@ class SpriteSet:
 
     """    
     def __init__(self):
-        pass
+        self.background = Background(0,0,BG_IMAGE)
+        self.text_box = TextBox((0,0,0), SCREEN_WIDTH, BOX_HEIGHT, 0, 636)
 
     def sprites_setter(self, game):
         """The sprites needed through out the whole game.
@@ -26,8 +27,6 @@ class SpriteSet:
         Args:
             game (Game Class): Connection to the game.
         """
-        self.background = Background(0,0,BG_IMAGE)
-        self.text_box = TextBox((0,0,0), SCREEN_WIDTH, BOX_HEIGHT, 0, 636)
         game.player = Ran(game, SPAWN_X,SPAWN_Y, RAN_IMAGE)
         game.d_box = TextBox((255,0,0), D_BOX, D_BOX, D_BOX_X, Y2)
         game.box.add(game.d_box)
