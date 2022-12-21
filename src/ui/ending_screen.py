@@ -51,6 +51,7 @@ class EndingScreen:
         for score in self.scores[0:4]:
             game.text(f"{score[0]}  {score[1]}",game.font1,414,y_cord)
             y_cord += 50
-        game.screen.blit(game.font2.render("Thank you for playing!!! Hope you liked my game :]",True,(128,0,128)),(280, 700))
+        game.screen.blit(game.font2.render("Thank you for playing!!! Hope you liked my game :]",
+        True,(128,0,128)),(280, 700))
         game.screen.blit(game.font2.render("- emlyy",True,(128,0,128)),(330, 750))
         pygame.display.flip()

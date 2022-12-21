@@ -59,9 +59,9 @@ class StartingScreen:
         game.text("toggle text option", game.font2, 850, 470)
         game.text("select", game.font2, 1010, 630)
 
-        game.text("start typing to input name", game.font2, 60, 200)
-        game.text("press ENTER to start game", game.font2, 60, 320)
-        game.text("name (max 10 charcters): " + self.input_text, game.font2, 60, 260)
+        game.text("Start typing to input name.", game.font2, 60, 200)
+        game.text("Press ENTER to start game.", game.font2, 60, 320)
+        game.text("Name (max 10 charcters): " + self.input_text, game.font2, 60, 260)
         game.screen.blit(game.font2.render("Welcome!!!",True,(0,0,0)),(350, 420))
         game.screen.blit(game.font2.render("I hope you enjoy",True,(0,0,0)),(350, 460))
         game.screen.blit(game.font2.render("the adventure :]",True,(0,0,0)),(350, 500))
