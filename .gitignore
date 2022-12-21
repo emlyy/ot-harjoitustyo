@@ -3,4 +3,3 @@ __pycache__
 .coverage
 htmlcov
 score_file.db
-test_score_file.db
