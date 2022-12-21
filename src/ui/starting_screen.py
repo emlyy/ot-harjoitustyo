@@ -24,6 +24,8 @@ class StartingScreen:
         self.start_sprites.add(Background(780, 420, "src/images/controls-2.png"))
         self.start_sprites.add(Background(780, 520, "src/images/controls-3.png"))
         self.start_sprites.add(Background(780, 620, "src/images/controls-5.png"))
+        self.start_sprites.add(Background(40, 510, "src/images/gremking_big.png"))
+        self.start_sprites.add(Background(310, 400, "src/images/textbubble.png"))
 
     def events(self,game):
         """Checks for user input events.
@@ -60,4 +62,7 @@ class StartingScreen:
         game.text("start typing to input name", game.font2, 60, 200)
         game.text("press ENTER to start game", game.font2, 60, 320)
         game.text("name (max 10 charcters): " + self.input_text, game.font2, 60, 260)
+        game.screen.blit(game.font2.render("Welcome!!!",True,(0,0,0)),(350, 420))
+        game.screen.blit(game.font2.render("I hope you enjoy",True,(0,0,0)),(350, 460))
+        game.screen.blit(game.font2.render("the adventure :]",True,(0,0,0)),(350, 500))
         pygame.display.update()
