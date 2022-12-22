@@ -84,3 +84,9 @@ Törmääminen viholliseen sekvenssikaaviona:
 
 ### Tapahtumat:
 Kun tapahtumaa on kutsuttu suoritettavaksi, [Actions](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/services/actions.py)-luokan muuttuja `counter` pitää kirjaa siitä, kuinka monta kertaa käyttäjä on painanut space-nappia. Aina kun käyttäjä painaa space-nappia, [events](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/ui/events.py) kutsuu tapahtumaa ja `counter` kasvaa yhdellä. Kun `counter` ylittää jonossa olevien tekstien määrän, tapahtuma päätty. [Actions](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/services/actions.py)-luokan metodi `back` palauttaa pelitilan takaisin normaaliksi; tekstit häviävät ja hahmoa voi liikuttaa.
+
+Tapahtumia kuvaava sekvenssikaavio:
+
+![boss fight sekvenssikaavio](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/Boss%20Fight.png)
+
+Yllä olevassa boss fight tapahtumassa käyttäjä on kerännyt miekan, ei ole kerännyt vettä ja valitsee miekka-vaihtoehdon. Tapahtuma alkaa tilanteesta, jossa käyttäjä on jo törmännyt vihollisen ja valitsee käyttää esinettä (use an item).
