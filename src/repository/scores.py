@@ -27,7 +27,7 @@ class Data:
         """
         try:
             self.file.execute("CREATE TABLE Scores (id INTEGER PRIMARY KEY, name TEXT, score INTEGER)")
-        except:
+        except sqlite3.OperationalError:
             pass
         self.file.execute("INSERT INTO Scores (name, score) VALUES (?, ?)", [name,score])
         self.file.commit()

@@ -1,3 +1,4 @@
+import pygame
 from ui.game import Game
 from ui.sprite_setter import SpriteSet
 from ui.events import events
@@ -34,5 +35,7 @@ def main():
 
 
 if __name__=="__main__":
-    main()
-  
+    try:
+        main()
+    except pygame.error:
+        print("You quit the game. Hope to see you soon!")
