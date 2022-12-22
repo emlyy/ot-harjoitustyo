@@ -23,3 +23,4 @@ Kaikkia [määrittelydokumentissa](https://github.com/emlyy/ot-harjoitustyo/blob
 * Punainen valinta laatikko ilmestyy aina siihen kohtaan, kumpi vaihtoehto on valittu viimeksi.
 * Testeissä käytetty `FakeGame`-luokka on pitkälti sama [sprites_test](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/tests/sprites_test.py) ja [actions_test](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/tests/actions_test.py) testeissä.
 * Jos käyttäjä kirjoittaa täysimittaisen leveistä merkeistä (esim. m) koostuvan nimen, tulos siirtyy tulostaulun ulkopuolelle
+* User input-vaativien metodien testattavuus ei niin hyvä, esim. `Ran`-luokan `update` ja `move` metodit.
