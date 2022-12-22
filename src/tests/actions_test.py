@@ -8,7 +8,7 @@ from services.actions import Actions
 from services.score_counter import ScoreCounter
 from text_lines import EAT_LIST, PUNCH_1, PUNCH_1A, PUNCH_2A, ROCK_1, ROCK_1B, ROCK_2B, SWORD, WATER, NOTE_1
 
-class Game:
+class FakeGame:
     def __init__(self): 
         pygame.init()
         self.clock = pygame.time.Clock()
@@ -46,13 +46,14 @@ class Game:
 
 class TestActions(unittest.TestCase):
     def setUp(self):
-        self.game = Game() 
+        self.game = FakeGame() 
 
     def test_back_action_enables_movement_and_resets_texts(self):
         self.game.current_text1.update("text1")
         self.game.decision1.update("text2")
         self.game.decision2.update("text3")
-        self.game.text_actions.back(self.game)
+        self.game.text_actions.update_current("back")
+        self.game.text_actions.act(self.game)
 
         self.assertEqual(str(self.game.current_text1) , "")
         self.assertEqual(str(self.game.decision1) , "")

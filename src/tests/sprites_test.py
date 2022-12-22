@@ -11,7 +11,7 @@ from services.current_text import CurrentText
 from services.actions import Actions
 from config import BARRIERS_LIST
 
-class Game:
+class FakeGame:
     def __init__(self): 
         pygame.init()
         self.clock = pygame.time.Clock()
@@ -48,7 +48,7 @@ class Game:
 
 class TestSprites(unittest.TestCase):
     def setUp(self):
-        self.game = Game()
+        self.game = FakeGame()
         self.setter = SpriteSet()
         self.game.player = Ran(self.game, 300, 300, "src/images/ran-1.png")
         self.game.note = Item(self.game, 500, 300, "src/images/star.png", "read_note", "back", "NOTE_FOUND", "YES", "NO")
