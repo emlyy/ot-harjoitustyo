@@ -59,11 +59,12 @@ Sprite oliot vastaavat eri esineisiin ja pelihahmoon liittyvistä toiminnallisuu
       ScoreCounter --> repository
 ```
 ## Tietojen pysyväistallennus
-[Data](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/repository/scores.py)-luokka vastaa tuloksien talletamisesta SQL-tietokantaan.
+[Data](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/repository/scores.py)-luokka vastaa tuloksien talletamisesta SQL-tietokantaan. Tallennettavat tiedot; `name` ja `score`, tallennetaan tauluun `Scores`.
 
 ## Päätoiminnallisuudet
 ### Liikkuminen
 Hahmon liikkuminen sekvenssikaaviona:
+
 ![game loop and movement](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/Game%20Loop%20and%20Movement.png)
 
 Käyttöliittymän [events](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/ui/events.py)-metodi tarkistaa ensin, mitä näppäimiä käyttäjä painaa. [Main](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/main.py) kutsuu peli-silmukassa `all_sprites.update`, joka kutsuu kaikkien `all_sprites`-ryhmän spritejen `update`-metodeja. Tällöin pelihahmo [Ran](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/sprites/ran.py)-luokan `update` kutsuu `move`-metodia. Tämän jälkeen, jos liikkumista ei ole estetty päivitetään koordinaatit ja tarkistetaan `collision`-metodilla, ettei hahmo törmää seiniin. Lopuksi 
