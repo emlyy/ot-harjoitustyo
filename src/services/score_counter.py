@@ -7,12 +7,13 @@ class ScoreCounter:
         knowledge: An integer counting the collected knowledge points.
     """
     def __init__(self):
-        self.name = ""
+        self.name = "noname"
         self.score = 0
         self.knowledge = 1
 
     def set_name(self, name):
-        self.name = name
+        if len(name) != 0:
+            self.name = name
 
     def reset_scores(self):
         self.score = 0
