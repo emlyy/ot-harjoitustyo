@@ -90,3 +90,7 @@ Tapahtumia kuvaava sekvenssikaavio:
 ![boss fight sekvenssikaavio](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/Boss%20Fight.png)
 
 Yllä olevassa boss fight tapahtumassa käyttäjä on kerännyt miekan, ei ole kerännyt vettä ja valitsee miekka-vaihtoehdon. Tapahtuma alkaa tilanteesta, jossa käyttäjä on jo törmännyt vihollisen ja valitsee käyttää esinettä (use an item).
+
+## Ohjelman rankenteeseen jääneet heikkoudet
+* `Game`-luokassa on liian paljon attribuutteja. Lisäksi pylint ilmoittaa, `item`-spritessä olevan liikaa argumentteja.
+* `Game` annetaan monelle metodille argumentiksi.
