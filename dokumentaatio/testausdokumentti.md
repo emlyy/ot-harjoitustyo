@@ -11,10 +11,16 @@
 
 ### Testauskattavuus
 Testauksen haarautumakattavuus on 89%. Kattavuusraportissa ei oteta huomioon käyttöliittymää.
-`Background` ja `TextBox` spritejä ei testattu, sillä se ei olisi ollut mielekästä. Testaamatta jäi myös se, että mitkä vaihtoehdot on boss fightessä riippuen siitä mitä esineitä on kerrännyt, poislukien tilanne jossa ei ole kerännyt yhtään esinettä.
+
+![coverage-report](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/coverage-report.png)
+
+`Background`ja `TextBox` spritejä ja pelkkää hahmon liikkumista eri suuntiin ei testattu. Testaamatta jäi myös se, että mitkä vaihtoehdot on boss fightessä riippuen siitä mitä esineitä on kerrännyt, poislukien tilanne jossa ei ole kerännyt yhtään esinettä.
 
 ## Manuaalinen testaus
 Kaikkia [määrittelydokumentissa](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md) kuvattuja toiminnallisuuksia on testattu manuaalisesti linux ympäristössä. Sovellus on ladattu ja käynnistetty [käyttöohjeen](https://github.com/emlyy/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md) mukaisesti.
 
 ## Sovellukseen jääneet laatuongelmat
 * Punainen valinta laatikko ilmestyy aina siihen kohtaan, kumpi vaihtoehto on valittu viimeksi.
+* Game luokassa on liian paljon argumentteja. Lisäksi pylint ilmoittaa, `item`-spritessä olevan liikaa argumentteja.
+* Testeissä käytetty `FakeGame`-luokka on pitkälti sama [sprites_test](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/tests/sprites_test.py) ja [actions_test](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/tests/actions_test.py) testeissä.
+* Jos käyttäjä kirjoittaa täysimittaisen leveistä merkeistä (esim. m) koostuvan nimen, tulos siirtyy tulostaulun ulkopuolelle
