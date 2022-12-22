@@ -21,6 +21,5 @@ Kaikkia [määrittelydokumentissa](https://github.com/emlyy/ot-harjoitustyo/blob
 
 ## Sovellukseen jääneet laatuongelmat
 * Punainen valinta laatikko ilmestyy aina siihen kohtaan, kumpi vaihtoehto on valittu viimeksi.
-* Game luokassa on liian paljon argumentteja. Lisäksi pylint ilmoittaa, `item`-spritessä olevan liikaa argumentteja.
 * Testeissä käytetty `FakeGame`-luokka on pitkälti sama [sprites_test](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/tests/sprites_test.py) ja [actions_test](https://github.com/emlyy/ot-harjoitustyo/blob/master/src/tests/actions_test.py) testeissä.
 * Jos käyttäjä kirjoittaa täysimittaisen leveistä merkeistä (esim. m) koostuvan nimen, tulos siirtyy tulostaulun ulkopuolelle
